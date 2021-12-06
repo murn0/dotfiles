@@ -8,7 +8,7 @@
 - [Hack Nerd fonts](https://github.com/source-foundry/Hack) - Nerd-patched fonts. (Theme required.)
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [peco](https://github.com/peco/peco) - Interactive filtering
-- [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
+- [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (macOS only)
 
 ## How to use
 
