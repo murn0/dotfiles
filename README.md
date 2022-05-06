@@ -9,6 +9,7 @@
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [peco](https://github.com/peco/peco) - Interactive filtering
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (macOS only)
+- [dog](https://dns.lookup.dog/) - dog, the command-line DNS client
 
 ## How to use
 
