@@ -6,7 +6,7 @@ DOTFILES_CONF_PATH := $(if $(XDG_CONFIG_HOME),$(XDG_CONFIG_HOME),$(HOME)/.config
 UNAME_S := $(shell uname -s)
 UNAME_P := $(shell uname -p)
 ifeq ($(UNAME_S), Linux)
-OS_NAME := $(shell grep -e ^NAME= /etc/os-release | awk -F'["]' '{ print $$2 }')
+OS_NAME := $(shell grep -e ^ID= /etc/os-release | awk -F'[=]' '{ print $$2 }')
 endif
 
 include $(BIN_PATH)/colors.mk
@@ -21,7 +21,7 @@ setup: ascii-art install create-symlinks init ## All setup
 install: ## Install packages
 ifeq ($(UNAME_S), Linux)
 	@echo "${WHITE}${BOLD}$(UNAME_S) - $(UNAME_P)${RESET}"
-ifeq ($(OS_NAME), Ubuntu)
+ifneq ($(filter $(OS_NAME),ubuntu debian), )
 	@echo "${WHITE}${BOLD}Distribution is $(OS_NAME)${RESET}"
 	@echo "${PURPLE}${BOLD}▓▒░ $(BIN_PATH)/install-ubuntu.mk を実行します${RESET}"
 	@$(MAKE) -f $(BIN_PATH)/install-ubuntu.mk --no-print-directory
