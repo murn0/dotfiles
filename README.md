@@ -1,4 +1,8 @@
 # My dotfiles
+## Instalation
+```
+curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
+```
 ## Shell
 - fish shell (https://fishshell.com/)
 
