@@ -21,11 +21,9 @@ setup: ascii-art install create-symlinks init ## All setup
 install: ## Install packages
 ifeq ($(UNAME_S), Linux)
 	@echo "${WHITE}${BOLD}$(UNAME_S) - $(UNAME_P)${RESET}"
-ifneq ($(filter $(OS_NAME),ubuntu debian), )
 	@echo "${WHITE}${BOLD}Distribution is $(OS_NAME)${RESET}"
-	@echo "${PURPLE}${BOLD}▓▒░ $(BIN_PATH)/install-ubuntu.mk を実行します${RESET}"
-	@$(MAKE) -f $(BIN_PATH)/install-ubuntu.mk --no-print-directory
-endif
+	@echo "${PURPLE}${BOLD}▓▒░ $(BIN_PATH)/install-$(OS_NAME).mk を実行します${RESET}"
+	@$(MAKE) -f $(BIN_PATH)/install-$(OS_NAME).mk --no-print-directory
 endif
 ifeq ($(UNAME_S), Darwin)
 	@echo "${WHITE}${BOLD}$(UNAME_S) - $(UNAME_P)${RESET}"
