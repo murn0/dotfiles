@@ -98,5 +98,5 @@ install-nvim: ## Install Nvim (https://github.com/neovim/neovim)
 	@echo "${BLUE}${BOLD}===> $$(nvim --version)${RESET}"
 
 install-iterm2-shell-integration: ## Install iTerm2 Shell Integration
-	@mkdir $(HOME)/.config/iterm2
+	@mkdir -p $(HOME)/.config/iterm2
 	@curl -Lo $(HOME)/.config/iterm2/.iterm2_shell_integration.fish "https://iterm2.com/shell_integration/fish"
