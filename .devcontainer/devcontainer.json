@@ -9,7 +9,13 @@
 		"bungcip.better-toml",
 		"bmalehorn.vscode-fish",
 		"redhat.vscode-yaml",
-		"EditorConfig.EditorConfig"
+		"EditorConfig.EditorConfig",
+		"mhutchie.git-graph",
+		"streetsidesoftware.code-spell-checker",
+		"adam-bender.commit-message-editor",
+		"tranhl.find-then-jump",
+		"oderwat.indent-rainbow",
+		"christian-kohler.path-intellisense"
 	],
 
 	"remoteUser": "vscode",
