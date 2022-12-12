@@ -27,6 +27,8 @@ ifeq ($(UNAME_S), Linux)
 endif
 ifeq ($(UNAME_S), Darwin)
 	@echo "${WHITE}${BOLD}$(UNAME_S) - $(UNAME_P)${RESET}"
+	@echo "${PURPLE}${BOLD}▓▒░ $(BIN_PATH)/install-macos.mk を実行します${RESET}"
+	@$(MAKE) -f $(BIN_PATH)/install-macos.mk --no-print-directory
 endif
 
 create-symlinks: ## Create symbolic links
