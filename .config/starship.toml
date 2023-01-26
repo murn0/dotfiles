@@ -12,9 +12,14 @@ $cmd_duration\
 $memory_usage\
 $battery\
 $time
-[└─](bold white)$character"""
+[└─](bold white)$character${custom.iterm_prompt_marker}"""
 
 scan_timeout = 10
+
+[custom.iterm_prompt_marker]
+command = "iterm2_prompt_mark"
+when = '[ "$ITERM2_SQUELCH_MARK" ]'
+format = "\u001b\\]133;A\u0007"
 
 [character]
 #success_symbol = "[❯](bold white)[❯](bold blue)[❯](bold cyan) "
@@ -28,7 +33,7 @@ error_symbol =   "[➤ ](bold red) "
 disabled = false
 zsh_indicator = "[Zsh](bold white)"
 fish_indicator = "[🐟](bold cyan)"
-format = "[via $indicator](white) "
+format = "[on $indicator](white) "
 
 [shlvl]
 disabled = false
