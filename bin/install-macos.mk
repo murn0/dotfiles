@@ -8,9 +8,9 @@ INSTALL_SCRIPTS := $(MAKEFILE_PATH)/install-scripts
 all: install-Brewfile install-packages
 
 install-Brewfile: ## Install Brewfile bundle (https://github.com/Homebrew/homebrew-bundle)
-	@brew bundle --file=$(MAKEFILE_PATH)/.Brewfile
+	@/opt/homebrew/bin/brew bundle --file=$(MAKEFILE_PATH)/.Brewfile
 
-PACKAGES := iterm2-shell-integration
+PACKAGES := iterm2-shell-integration aqua
 define PACKAGE_TEMPLATE
 $(1):
 	@$(MAKE) -f $(INSTALL_SCRIPTS)/install-$1.mk --no-print-directory

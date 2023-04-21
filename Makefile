@@ -37,6 +37,8 @@ create-symlinks: ## Create symbolic links
 init: ## Initialize settings
 	@echo "${GREEN}▓▒░ Fisher update${RESET}"
 	@fish -c 'fisher update'
+	@echo "${GREEN}▓▒░ Install all tools globally${RESET}"
+	@fish -c '$(HOME)/.local/share/aquaproj-aqua/bin/aqua i -a'
 
 doctor: ## Troubleshooting
 	@$(MAKE) -f $(BIN_PATH)/doctor.mk --no-print-directory

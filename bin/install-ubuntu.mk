@@ -21,7 +21,7 @@ install-fisher: ## Install fisher (https://github.com/jorgebucaran/fisher)
 	@$(MAKE) -f $(INSTALL_SCRIPTS)/install-fisher.mk --no-print-directory
 
 
-PACKAGES := starship github-cli exa tree fd bat fzf zoxide nvim iterm2-shell-integration
+PACKAGES := iterm2-shell-integration aqua
 define PACKAGE_TEMPLATE
 $(1):
 	@$(MAKE) -f $(INSTALL_SCRIPTS)/install-$1.mk --no-print-directory
