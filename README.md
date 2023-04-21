@@ -39,6 +39,9 @@ Running the `make` command will display help
 - `Ctrl+g` : Git log search
 - `Ctrl+c` : `cd` with interactive selection (using `zoxide`)
 
+## Requires
+⚠️For MacOS, please install Homebrew first
+
 ## Codespaces
 You can also start **Github Codespaces** and try it out
 ```
