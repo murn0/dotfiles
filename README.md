@@ -26,6 +26,8 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - bat (https://github.com/sharkdp/bat)
 - fzf (https://github.com/junegunn/fzf)
 - zoxide (https://github.com/ajeetdsouza/zoxide)
+- dog (https://github.com/ogham/dog)
+- neovim (https://github.com/neovim/neovim)
 
 ## Makefile task
 Running the `make` command will display help
