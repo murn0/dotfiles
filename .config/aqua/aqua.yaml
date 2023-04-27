@@ -8,7 +8,7 @@
 #   - all
 registries:
 - type: standard
-  ref: v3.158.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v3.159.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: jez/as-tree@0.12.0
 - name: sharkdp/bat@v0.23.0
