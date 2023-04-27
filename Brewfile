@@ -23,8 +23,6 @@ brew "mas"
 brew "tmux"
 # Command-line translator using Google Translate and more
 brew "translate-shell"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Password manager that keeps all passwords secure behind one password
 cask "1password", args: { appdir: "/Applications" }
 # Command-line helper for the 1Password password manager
