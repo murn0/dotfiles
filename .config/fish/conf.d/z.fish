@@ -11,6 +11,8 @@ set -Ux _ZO_FZF_OPTS '
     --preview=\'exa -la {2..}\'
 '
 
+set -gx _ZO_DATA_DIR "$XDG_DATA_HOME/zoxide"
+
 if command -v zoxide &>/dev/null
     zoxide init fish | source
 end
