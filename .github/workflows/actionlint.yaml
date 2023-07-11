@@ -1,0 +1,23 @@
+---
+# Separate the workflow for actionlint to other workflows, because if a workflow for actionlint is broken actionlint isn't run
+name: actionlint
+on:
+  pull_request:
+    paths:
+      - .github/workflows/*.yaml
+      - .github/aqua/imports/actionlint.yaml
+      - .github/aqua/imports/reviewdog.yaml
+
+env:
+  AQUA_LOG_COLOR: always
+  AQUA_CONFIG: .github/aqua/ci.yaml
+
+jobs:
+  actionlint:
+    uses: suzuki-shunsuke/actionlint-workflow/.github/workflows/actionlint.yaml@b6a5f966d4504893b2aeb60cf2b0de8946e48504 # v0.5.0
+    with:
+      aqua_version: v2.9.0
+      aqua_policy_allow: true
+    permissions:
+      pull-requests: write
+      contents: read
