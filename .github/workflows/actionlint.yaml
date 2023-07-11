@@ -9,8 +9,8 @@ on:
       - .github/aqua/imports/reviewdog.yaml
 
 env:
-  AQUA_LOG_COLOR: always
   AQUA_CONFIG: .github/aqua/ci.yaml
+  AQUA_LOG_COLOR: always
 
 jobs:
   actionlint:
