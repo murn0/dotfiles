@@ -8,11 +8,10 @@ EXCLUDES             := .DS_Store .git
 FISH_SETTING_FILES   := $(wildcard $(MAKEFILE_PATH)/.config/fish/conf.d/*.fish)
 FISH_FUNCTION_FILES   := $(wildcard $(MAKEFILE_PATH)/.config/fish/functions/*.fish)
 ZSH_SETTING_FILES    := $(wildcard $(MAKEFILE_PATH)/.config/zsh/settings/*.zsh)
-AQUA_CONFIG_FILES    := $(wildcard $(MAKEFILE_PATH)/.config/aqua/*.yaml)
 
 .PHONY: $(shell cat $(MAKEFILE_LIST) | awk -F':' '/^[a-z0-9_-]+:/ {print $$1}')
 
-all: create-fish-symlinks create-tmux-symlinks create-zsh-symlinks create-starship-symlinks create-aqua-symlinks
+all: create-fish-symlinks create-tmux-symlinks create-zsh-symlinks create-starship-symlinks
 
 create-fish-symlinks: ## Create symbolic link for fish settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Fish${RESET}"
@@ -36,9 +35,4 @@ create-zsh-symlinks: ## Create symbolic link for Zsh settings
 create-starship-symlinks: ## Create symbolic link for starship settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Starship${RESET}"
 	@ln -fnsv $(DOTFILES_CONFIG_PATH)/starship.toml $(XDG_CONFIG_HOME_PATH)/starship.toml
-
-create-aqua-symlinks: ## Create symbolic link for aqua settings
-	@echo "${PURPLE}▓▒░ Create symbolic link for aqua${RESET}"
-	@mkdir -p $(XDG_CONFIG_HOME_PATH)/aqua
-	# @ln -fnsv $(DOTFILES_CONFIG_PATH)/aqua/aqua.yaml $(XDG_CONFIG_HOME_PATH)/aqua/aqua.yaml
-	@$(foreach val, $(filter-out $(EXCULDES), $(AQUA_CONFIG_FILES)), ln -fnsv $(abspath $(val)) $(XDG_CONFIG_HOME_PATH)/aqua/$(notdir $(val));)
+	
