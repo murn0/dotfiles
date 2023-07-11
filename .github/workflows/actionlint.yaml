@@ -8,16 +8,13 @@ on:
       - .github/aqua/imports/actionlint.yaml
       - .github/aqua/imports/reviewdog.yaml
 
-env:
-  AQUA_CONFIG: .github/aqua/ci.yaml
-  AQUA_LOG_COLOR: always
-
 jobs:
   actionlint:
     uses: murn0/actionlint-workflow/.github/workflows/actionlint.yaml@main
     with:
       aqua_version: v2.9.0
       aqua_policy_allow: true
+      aqua_config: .github/aqua/ci.yaml
     permissions:
       pull-requests: write
       contents: read
