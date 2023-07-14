@@ -3,28 +3,33 @@ name: Pull Request
 on: pull_request
 permissions: {}
 jobs:
-  load-secret:
-    runs-on: ubuntu-latest
-    permissions: {}
-    outputs:
-      APP_ID: ${{steps.op-load-secret.outputs.APP_ID}}
-      APP_SECRET: ${{steps.op-load-secret.outputs.APP_SECRET}}
-    steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
-      - uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
-        id: op-load-secret
-        with:
-          export-env: false
-        env:
-          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          APP_ID: "op://Github/uhto3hzapjcxicwm664wvh4zu4/AppID"
-          APP_SECRET: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
-
   add-label:
-    needs: load-secret
     permissions:
       contents: read
     uses: murn0/auto-add-labels-workflow/.github/workflows/main.yaml@f97918aeaeddccf4be0689d48f05b82403c21586 # v0.4.1
     secrets:
       gh_app_id: ${{secrets.GH_APP_ID}}
-      gh_app_private_key: ${{needs.load-secret.outputs.APP_SECRET}}
+      gh_app_private_key: ${{secrets.GH_APP_PRIVATE_KEY}}
+  
+  auto-merge:
+    permissions:
+      contents: read
+    uses: murn0/renovate-automerge-workflow/.github/workflows/main.yaml@c712e0419d4115557fbc1ce2260bd0aa4802692c # v0.4.1
+    with:
+      filters: |
+        ghalint:
+          - .github/workflows/*.yaml
+          - aqua/aqua.yaml
+          - aqua/imports/ci/ghalint.yaml
+          - ghalint.yaml
+        renovate-config-validator:
+          - renovate.json
+          - .github/workflows/pull_request.yaml
+        update-aqua-checksums:
+          - aqua/aqua.yaml
+          - aqua/imports/*/*.yaml
+          - aqua/aqua-checksums.json
+          - .github/workflows/pull_request.yaml
+    secrets:
+      gh_app_id: ${{secrets.GH_APP_ID}}
+      gh_app_private_key: ${{secrets.GH_APP_PRIVATE_KEY}}
