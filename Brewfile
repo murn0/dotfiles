@@ -69,8 +69,6 @@ cask "swiftbar"
 cask "tableplus", args: { appdir: "/Applications" }
 # File transfer application
 cask "transmit", args: { appdir: "/Applications" }
-# Open-source code editor
-cask "visual-studio-code", args: { appdir: "/Applications" }
 mas "Craft", id: 1487937127
 mas "Image Tool+", id: 1524216218
 mas "LINE", id: 539883307
@@ -79,3 +77,41 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Tailscale", id: 1475387142
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
+vscode "adam-bender.commit-message-editor"
+vscode "artdiniz.quitcontrol-vscode"
+vscode "bmalehorn.vscode-fish"
+vscode "bungcip.better-toml"
+vscode "christian-kohler.path-intellisense"
+vscode "EditorConfig.EditorConfig"
+vscode "Equinusocio.vsc-community-material-theme"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-close-tag"
+vscode "formulahendry.auto-rename-tag"
+vscode "GitHub.codespaces"
+vscode "GitHub.remotehub"
+vscode "github.vscode-github-actions"
+vscode "golang.go"
+vscode "mhutchie.git-graph"
+vscode "mikestead.dotenv"
+vscode "mosapride.zenkaku"
+vscode "ms-azuretools.vscode-docker"
+vscode "MS-CEINTL.vscode-language-pack-ja"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.azure-repos"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-repositories"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "nmsmith89.incrementor"
+vscode "oderwat.indent-rainbow"
+vscode "PKief.material-icon-theme"
+vscode "redhat.vscode-yaml"
+vscode "ritwickdey.LiveServer"
+vscode "satokaz.vscode-bs-ctrlchar-remover"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "timonwong.shellcheck"
+vscode "tranhl.find-then-jump"
+vscode "wayou.vscode-todo-highlight"
+vscode "wix.vscode-import-cost"
+vscode "yatki.vscode-surround"
