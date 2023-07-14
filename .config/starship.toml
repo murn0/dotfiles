@@ -20,6 +20,7 @@ scan_timeout = 10
 command = "iterm2_prompt_mark"
 when = '[ "$ITERM2_SQUELCH_MARK" ]'
 format = "\u001b\\]133;A\u0007"
+ignore_timeout = true
 
 [character]
 #success_symbol = "[❯](bold white)[❯](bold blue)[❯](bold cyan) "

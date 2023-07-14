@@ -27,9 +27,10 @@ endif
 install-fisher: ## Install fisher (https://github.com/jorgebucaran/fisher)
 	@$(MAKE) -f $(INSTALL_SCRIPTS)/install-fisher.mk --no-print-directory
 
-PACKAGES := iterm2-shell-integration aqua
+PACKAGES := iterm2-shell-integration aquaproj
 define PACKAGE_TEMPLATE
 $(1):
+	@echo "${YELLOW}▓▒░ Installing $1 ${RESET}"
 	@$(MAKE) -f $(INSTALL_SCRIPTS)/install-$1.mk --no-print-directory
 endef
 $(foreach package, $(PACKAGES), $(eval $(call PACKAGE_TEMPLATE,$(package))))

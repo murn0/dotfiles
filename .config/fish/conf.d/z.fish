@@ -11,6 +11,9 @@ set -Ux _ZO_FZF_OPTS '
     --preview=\'exa -la {2..}\'
 '
 
+# zoxideのDB保存場所
+set -gx _ZO_DATA_DIR "$HOME/.local/share/zoxide"
+
 if command -v zoxide &>/dev/null
     zoxide init fish | source
 end

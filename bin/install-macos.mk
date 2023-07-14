@@ -10,9 +10,10 @@ all: install-Brewfile install-packages
 install-Brewfile: ## Install Brewfile bundle (https://github.com/Homebrew/homebrew-bundle)
 	@/opt/homebrew/bin/brew bundle --file=$(MAKEFILE_PATH)/.Brewfile
 
-PACKAGES := iterm2-shell-integration aqua
+PACKAGES := iterm2-shell-integration aquaproj
 define PACKAGE_TEMPLATE
 $(1):
+	@echo "${YELLOW}▓▒░ Installing $1 ${RESET}"
 	@$(MAKE) -f $(INSTALL_SCRIPTS)/install-$1.mk --no-print-directory
 endef
 $(foreach package, $(PACKAGES), $(eval $(call PACKAGE_TEMPLATE,$(package))))
