@@ -28,5 +28,5 @@ jobs:
       contents: read
     uses: murn0/auto-add-labels-workflow/.github/workflows/main.yaml@f97918aeaeddccf4be0689d48f05b82403c21586 # v0.4.1
     secrets:
-      gh_app_id: ${{needs.load-secret.outputs.APP_ID}}
+      gh_app_id: ${{secrets.GH_APP_ID}}
       gh_app_private_key: ${{needs.load-secret.outputs.APP_SECRET}}
