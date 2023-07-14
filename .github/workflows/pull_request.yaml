@@ -1,0 +1,22 @@
+---
+name: Pull Request
+on: pull_request
+permissions: {}
+jobs:
+  add-label:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
+        id: op-load-secret
+        with:
+          export-env: false
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          APP_ID: "op://Github/uhto3hzapjcxicwm664wvh4zu4/AppID"
+          SECRET: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
+      - uses: murn0/auto-add-labels-workflow/.github/workflows/main.yaml@f97918aeaeddccf4be0689d48f05b82403c21586 # v0.4.1
+        secrets:
+          gh_app_id: ${{steps.op-load-secret.outputs.APP_ID}}
+          gh_app_private_key: ${{steps.op-load-secret.outputs.SECRET}}
