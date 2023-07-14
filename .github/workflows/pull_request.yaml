@@ -18,6 +18,9 @@ jobs:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           APP_ID: "op://Github/uhto3hzapjcxicwm664wvh4zu4/AppID"
           APP_SECRET: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
+      - name: Print masked secret
+        run: |
+          echo "APP_ID: ${{ steps.op-load-secret.outputs.APP_ID }}"
 
   add-label:
     needs: load-secret
