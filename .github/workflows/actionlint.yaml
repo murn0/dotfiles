@@ -5,8 +5,8 @@ on:
   pull_request:
     paths:
       - .github/workflows/*.yaml
-      - .github/aqua/imports/ci/actionlint.yaml
-      - .github/aqua/imports/ci/reviewdog.yaml
+      - aqua/imports/ci/actionlint.yaml
+      - aqua/imports/ci/reviewdog.yaml
 
 jobs:
   actionlint:
