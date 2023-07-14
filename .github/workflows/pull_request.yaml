@@ -10,6 +10,7 @@ jobs:
       APP_ID: ${{steps.op-load-secret.outputs.APP_ID}}
       APP_SECRET: ${{steps.op-load-secret.outputs.APP_SECRET}}
     steps:
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
       - uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
         id: op-load-secret
         with:
@@ -18,9 +19,6 @@ jobs:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           APP_ID: "op://Github/uhto3hzapjcxicwm664wvh4zu4/AppID"
           APP_SECRET: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
-      - name: Print masked secret
-        run: |
-          echo "APP_ID: ${{ steps.op-load-secret.outputs.APP_ID }}"
 
   add-label:
     needs: load-secret
