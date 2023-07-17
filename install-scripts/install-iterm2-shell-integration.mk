@@ -1,4 +1,4 @@
-include $(PWD)/bin/colors.mk
+include $(PWD)/install-scripts/colors.mk
 
 .PHONY: $(shell cat $(MAKEFILE_LIST) | awk -F':' '/^[a-z0-9_-]+:/ {print $$1}')
 
