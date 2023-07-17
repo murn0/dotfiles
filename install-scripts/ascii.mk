@@ -11,7 +11,7 @@ define ASCII_ART
 endef
 export ASCII_ART
 
-include $(PWD)/bin/colors.mk
+include $(PWD)/install-scripts/colors.mk
 
 .PHONY: ascii-art
 

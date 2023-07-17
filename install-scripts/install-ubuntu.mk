@@ -1,4 +1,4 @@
-include $(PWD)/bin/colors.mk
+include $(PWD)/install-scripts/colors.mk
 
 MAKEFILE_PATH := $(shell dirname $(realpath $(dir $(lastword $(MAKEFILE_LIST)))))
 INSTALL_SCRIPTS := $(MAKEFILE_PATH)/install-scripts

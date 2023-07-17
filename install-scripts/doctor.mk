@@ -1,6 +1,6 @@
-include $(PWD)/bin/colors.mk
+include $(PWD)/install-scripts/colors.mk
 
-CHECK_COMMANDS := fish starship gh exa tree fd bat fzf zoxide nvim
+CHECK_COMMANDS := fish bat dog erd exa fd fzf gh nvim starship zoxide
 
 all: $(CHECK_COMMANDS)
 
