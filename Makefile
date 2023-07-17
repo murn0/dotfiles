@@ -34,6 +34,9 @@ endif
 create-symlinks: ## Create symbolic links
 	@$(MAKE) -f $(INSTALL_SCRIPTS_PATH)/symlinks.mk --no-print-directory
 
+unlinks: ## Unlink symbolic links
+	@$(MAKE) -f $(INSTALL_SCRIPTS_PATH)/unlinks.mk --no-print-directory
+
 init: ## Initialize settings
 	@echo "${GREEN}▓▒░ Fisher update${RESET}"
 	@fish -c 'fisher update'
