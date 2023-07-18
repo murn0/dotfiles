@@ -32,3 +32,6 @@ unlink-starship-symlinks: ## Unlink symbolic link for starship settings
 	@echo "${RED}▓▒░ Unlink symbolic link for Starship${RESET}"
 	@unlink $(XDG_CONFIG_HOME_PATH)/starship.toml
 	
+unlink-erdtree-symlinks: ## Unlink symbolic link for erdtree settings
+	@echo "${RED}▓▒░ Unlink symbolic link for erdtree${RESET}"
+	@unlink $(XDG_CONFIG_HOME_PATH)/erdtree/.erdtree.toml
