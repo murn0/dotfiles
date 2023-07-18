@@ -11,7 +11,7 @@ ZSH_SETTING_FILES    := $(wildcard $(MAKEFILE_PATH)/.config/zsh/settings/*.zsh)
 
 .PHONY: $(shell cat $(MAKEFILE_LIST) | awk -F':' '/^[a-z0-9_-]+:/ {print $$1}')
 
-all: create-fish-symlinks create-tmux-symlinks create-zsh-symlinks create-starship-symlinks
+all: create-fish-symlinks create-tmux-symlinks create-zsh-symlinks create-starship-symlinks create-erdtree-symlinks
 
 create-fish-symlinks: ## Create symbolic link for fish settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Fish${RESET}"
@@ -36,3 +36,7 @@ create-starship-symlinks: ## Create symbolic link for starship settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Starship${RESET}"
 	@ln -fnsv $(DOTFILES_CONFIG_PATH)/starship.toml $(XDG_CONFIG_HOME_PATH)/starship.toml
 	
+create-erdtree-symlinks: ## Create symbolic link for erdtree settings
+	@echo "${PURPLE}▓▒░ Create symbolic link for erdtree${RESET}"
+	@mkdir -p $(XDG_CONFIG_HOME_PATH)/erdtree
+	@ln -fnsv $(DOTFILES_CONFIG_PATH)/erdtree/.erdtree.toml $(XDG_CONFIG_HOME_PATH)/erdtree/.erdtree.toml

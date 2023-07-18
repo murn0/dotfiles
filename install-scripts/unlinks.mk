@@ -9,7 +9,7 @@ ZSH_SETTING_DIR    := $(XDG_CONFIG_HOME_PATH)/zsh/settings
 
 .PHONY: $(shell cat $(MAKEFILE_LIST) | awk -F':' '/^[a-z0-9_-]+:/ {print $$1}')
 
-all: unlink-fish-symlinks unlink-tmux-symlinks unlink-zsh-symlinks unlink-starship-symlinks
+all: unlink-fish-symlinks unlink-tmux-symlinks unlink-zsh-symlinks unlink-starship-symlinks unlink-erdtree-symlinks
 
 unlink-fish-symlinks: ## Unlink symbolic link for fish settings
 	@echo "${RED}▓▒░ Unlink symbolic link for Fish${RESET}"
@@ -32,3 +32,6 @@ unlink-starship-symlinks: ## Unlink symbolic link for starship settings
 	@echo "${RED}▓▒░ Unlink symbolic link for Starship${RESET}"
 	@unlink $(XDG_CONFIG_HOME_PATH)/starship.toml
 	
+unlink-erdtree-symlinks: ## Unlink symbolic link for erdtree settings
+	@echo "${RED}▓▒░ Unlink symbolic link for erdtree${RESET}"
+	@unlink $(XDG_CONFIG_HOME_PATH)/erdtree/.erdtree.toml
