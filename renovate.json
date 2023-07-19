@@ -6,13 +6,5 @@
         "github>aquaproj/aqua-renovate-config#1.6.0",
         "github>aquaproj/aqua-renovate-config:file#1.6.0(aqua/imports/*/.*\\.ya?ml)",
         "github>aquaproj/aqua-renovate-config:installer-script#1.6.0(install-aquaproj\\.mk)"
-    ],
-    "regexManagers": [
-        {
-            "fileMatch": ["install-aqua.mk"],
-            "depNameTemplate": "aquaproj/aqua",
-            "datasourceTemplate": "github-releases",
-            "matchStrings": ["./aqua-installer -v (?<currentValue>.*)"]
-        }
     ]
 }
