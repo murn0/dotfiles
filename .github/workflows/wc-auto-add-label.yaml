@@ -5,7 +5,8 @@ permissions: {}
 jobs:
   auto-add-label:
     runs-on: ubuntu-latest
-    permissions: {}
+    permissions:
+      pull-requests: write
     if: >-
       github.event.pull_request.user.login != 'renovate[bot]' &&
       contains(github.head_ref, 'feat') ||
