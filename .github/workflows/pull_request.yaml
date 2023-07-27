@@ -7,26 +7,77 @@ jobs:
     permissions:
       pull-requests: write
     uses: ./.github/workflows/wc-auto-add-label.yaml
-  
-  auto-merge:
+
+  path-filter:
+    outputs:
+      ghalint: ${{steps.changes.outputs.ghalint}}
+      renovate-config-validator: ${{steps.changes.outputs.renovate-config-validator}}
+      update-aqua-checksums: ${{steps.changes.outputs.update-aqua-checksums}}
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 # v2.11.1
+        id: changes
+        with:
+          filters: |
+            ghalint:
+              - .github/workflows/*.yaml
+              - aqua/aqua.yaml
+              - aqua/imports/ci/ghalint.yaml
+              - ghalint.yaml
+            renovate-config-validator:
+              - renovate.json
+              - .github/workflows/pull_request.yaml
+              - .github/workflows/wc-renovate-config-validator.yaml
+            update-aqua-checksums:
+              - aqua/aqua.yaml
+              - aqua/imports/*/*.yaml
+              - aqua/aqua-checksums.json
+              - .github/workflows/pull_request.yaml
+              - .github/workflows/wc-update-aqua-checksums.yaml
+
+  ghalint:
+    needs: path-filter
+    if: needs.path-filter.outputs.ghalint == 'true'
+    uses: ./.github/workflows/wc-ghalint.yaml
+    permissions: {}
+
+  renovate-config-validator:
+    needs: path-filter
+    if: needs.path-filter.outputs.renovate-config-validator == 'true'
+    uses: ./.github/workflows/wc-renovate-config-validator.yaml
     permissions:
       contents: read
-    uses: murn0/renovate-automerge-workflow/.github/workflows/main.yaml@c712e0419d4115557fbc1ce2260bd0aa4802692c # v0.4.1
-    with:
-      filters: |
-        ghalint:
-          - .github/workflows/*.yaml
-          - aqua/aqua.yaml
-          - aqua/imports/ci/ghalint.yaml
-          - ghalint.yaml
-        renovate-config-validator:
-          - renovate.json
-          - .github/workflows/pull_request.yaml
-        update-aqua-checksums:
-          - aqua/aqua.yaml
-          - aqua/imports/*/*.yaml
-          - aqua/aqua-checksums.json
-          - .github/workflows/pull_request.yaml
+  
+  update-aqua-checksums:
+    needs: path-filter
+    if: needs.path-filter.outputs.update-aqua-checksums == 'true'
+    uses: ./.github/workflows/wc-update-aqua-checksums.yaml
+    permissions:
+      contents: read
     secrets:
-      gh_app_id: ${{secrets.GH_APP_ID}}
-      gh_app_private_key: ${{secrets.GH_APP_PRIVATE_KEY}}
+      gh_app_id: ${{secrets.gh_app_id}}
+      gh_app_private_key: ${{secrets.gh_app_private_key}}
+
+  status-check:
+    needs:
+      - ghalint
+      - renovate-config-validator
+      - update-aqua-checksums
+    uses: ./.github/workflows/wc-status-check.yaml
+    permissions: {}
+    if: failure()
+
+  enable-automerge:
+    needs:
+      - status-check
+    # "! failure() && ! cancelled()" is required. success() returns false if dependent jobs are skipped.
+    # https://github.com/community/community/discussions/45058
+    # By default success() is used so we have to override success() by "! failure() && ! cancelled()"
+    if: |
+      ! failure() && ! cancelled() && github.event.pull_request.user.login == 'renovate[bot]' && contains(github.event.pull_request.body, ' **Automerge**: Enabled.')
+    uses: ./.github/workflows/wc-enable-auto-merge.yaml
+    permissions: {}
+    secrets:
+      gh_app_id: ${{secrets.gh_app_id}}
+      gh_app_private_key: ${{secrets.gh_app_private_key}}
