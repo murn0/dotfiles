@@ -1,0 +1,34 @@
+name: Pull request auto add label workflow
+on: workflow_call
+
+permissions: {}
+jobs:
+  auto-add-label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: >-
+      github.event.pull_request.user.login != 'renovate[bot]' &&
+      contains(github.head_ref, 'feat') ||
+      contains(github.head_ref, 'fix') ||
+      contains(github.head_ref, 'test') ||
+      contains(github.head_ref, 'doc')
+    steps:
+      - run: |
+          if [[ "$HEAD_REF" == *"feat"* ]]; then
+            echo "HEADブランチに 'feat' が含まれています。"
+            gh -R "$GITHUB_REPOSITORY" pr edit "$PR_NUMBER" --add-label "feature"
+          elif [[ "$HEAD_REF" == *"fix"* ]]; then
+            echo "HEADブランチに 'fix' が含まれています。"
+            gh -R "$GITHUB_REPOSITORY" pr edit "$PR_NUMBER" --add-label "fix"
+          elif [[ "$HEAD_REF" == *"test"* ]]; then
+            echo "HEADブランチに 'test' が含まれています。"
+            gh -R "$GITHUB_REPOSITORY" pr edit "$PR_NUMBER" --add-label "test"
+          elif [[ "$HEAD_REF" == *"doc"* ]]; then
+            echo "HEADブランチに 'doc' が含まれています。"
+            gh -R "$GITHUB_REPOSITORY" pr edit "$PR_NUMBER" --add-label "documentation"
+          fi
+        env:
+          GITHUB_TOKEN: ${{github.token}}
+          PR_NUMBER: ${{github.event.pull_request.number}}
+          HEAD_REF: ${{github.head_ref}}

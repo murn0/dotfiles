@@ -33,6 +33,8 @@ cask "adobe-creative-cloud", args: { appdir: "/Applications" }
 cask "bartender", args: { appdir: "/Applications" }
 # Tool to customize input devices and automate computer systems
 cask "bettertouchtool"
+# Graphical configurator for Kaleidoscope-powered keyboards
+cask "chrysalis"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Screen capturing tool
@@ -51,6 +53,8 @@ cask "google-japanese-ime", args: { appdir: "/Applications" }
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Keyboard customizer
+cask "karabiner-elements"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
 # Interface for reading and syncing eBooks
@@ -69,6 +73,8 @@ cask "swiftbar"
 cask "tableplus", args: { appdir: "/Applications" }
 # File transfer application
 cask "transmit", args: { appdir: "/Applications" }
+# Open-source code editor
+cask "visual-studio-code"
 mas "Craft", id: 1487937127
 mas "Image Tool+", id: 1524216218
 mas "LINE", id: 539883307
@@ -80,7 +86,6 @@ mas "Xcode", id: 497799835
 vscode "adam-bender.commit-message-editor"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "bmalehorn.vscode-fish"
-vscode "bungcip.better-toml"
 vscode "christian-kohler.path-intellisense"
 vscode "DavidLGoldberg.jumpy2"
 vscode "EditorConfig.EditorConfig"
@@ -89,6 +94,7 @@ vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "GitHub.codespaces"
+vscode "GitHub.copilot"
 vscode "GitHub.remotehub"
 vscode "github.vscode-github-actions"
 vscode "golang.go"
@@ -114,8 +120,8 @@ vscode "redhat.vscode-yaml"
 vscode "ritwickdey.LiveServer"
 vscode "satokaz.vscode-bs-ctrlchar-remover"
 vscode "streetsidesoftware.code-spell-checker"
-vscode "timonwong.shellcheck"
+vscode "Tailscale.vscode-tailscale"
+vscode "tamasfe.even-better-toml"
 vscode "tranhl.find-then-jump"
 vscode "wayou.vscode-todo-highlight"
 vscode "wix.vscode-import-cost"
-vscode "yatki.vscode-surround"
