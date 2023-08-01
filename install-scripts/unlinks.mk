@@ -5,16 +5,22 @@ XDG_CONFIG_HOME_PATH := $(HOME)/.config
 
 FISH_SETTING_DIR   := $(XDG_CONFIG_HOME_PATH)/fish/conf.d
 FISH_FUNCTION_DIR   := $(XDG_CONFIG_HOME_PATH)/fish/functions
+FISH_MODULES_DIR	:= $(XDG_CONFIG_HOME_PATH)/fish/modules
 ZSH_SETTING_DIR    := $(XDG_CONFIG_HOME_PATH)/zsh/settings
 
 .PHONY: $(shell cat $(MAKEFILE_LIST) | awk -F':' '/^[a-z0-9_-]+:/ {print $$1}')
 
-all: unlink-fish-symlinks unlink-tmux-symlinks unlink-zsh-symlinks unlink-starship-symlinks unlink-erdtree-symlinks
+all: unlink-fish-symlinks \
+	unlink-tmux-symlinks \
+	unlink-zsh-symlinks \
+	unlink-starship-symlinks \
+	unlink-erdtree-symlinks \
 
 unlink-fish-symlinks: ## Unlink symbolic link for fish settings
 	@echo "${RED}▓▒░ Unlink symbolic link for Fish${RESET}"
 	@find $(FISH_SETTING_DIR) -name "*.fish" -type l -exec unlink {} \;
 	@find $(FISH_FUNCTION_DIR) -name "*.fish" -type l -exec unlink {} \;
+	@find $(FISH_MODULES_DIR) -name "*.fish" -type l -exec unlink {} \;
 	@unlink $(XDG_CONFIG_HOME_PATH)/fish/config.fish
 	@unlink $(XDG_CONFIG_HOME_PATH)/fish/fish_plugins
 

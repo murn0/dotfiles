@@ -11,3 +11,9 @@ else if test -n "$XDG_DATA_HOME"
 else
     fish_add_path -p "$HOME/.local/share/aquaproj-aqua/bin"
 end
+
+# Loading the Shell Integration File for Wezterm
+set WEZTERM_SHELL_INTEGRATION $XDG_CONFIG_HOME/fish/modules/wezterm.fish
+if test -f $WEZTERM_SHELL_INTEGRATION
+    source $WEZTERM_SHELL_INTEGRATION
+end
