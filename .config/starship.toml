@@ -12,15 +12,9 @@ $cmd_duration\
 $memory_usage\
 $battery\
 $time
-[└─](bold white)$character${custom.iterm_prompt_marker}"""
+[└─](bold white)$character"""
 
 scan_timeout = 10
-
-[custom.iterm_prompt_marker]
-command = "iterm2_prompt_mark"
-when = '[ "$ITERM2_SQUELCH_MARK" ]'
-format = "\u001b\\]133;A\u0007"
-ignore_timeout = true
 
 [character]
 #success_symbol = "[❯](bold white)[❯](bold blue)[❯](bold cyan) "
