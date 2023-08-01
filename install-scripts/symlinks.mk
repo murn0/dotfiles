@@ -12,7 +12,11 @@ ZSH_SETTING_FILES    := $(wildcard $(MAKEFILE_PATH)/.config/zsh/settings/*.zsh)
 
 .PHONY: $(shell cat $(MAKEFILE_LIST) | awk -F':' '/^[a-z0-9_-]+:/ {print $$1}')
 
-all: create-fish-symlinks create-tmux-symlinks create-zsh-symlinks create-starship-symlinks create-erdtree-symlinks
+all: create-fish-symlinks \
+	create-tmux-symlinks \
+	create-zsh-symlinks \
+	create-starship-symlinks \
+	create-erdtree-symlinks
 
 create-fish-symlinks: ## Create symbolic link for fish settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Fish${RESET}"
