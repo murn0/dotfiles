@@ -1,0 +1,6 @@
+gui:
+  language: 'ja'
+  showIcons: true
+
+os:
+  editPreset: 'vscode'
