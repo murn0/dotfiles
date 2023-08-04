@@ -21,24 +21,27 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 ## Install packages
 - GithubCLI (https://github.com/cli/cli)
 - exa (https://github.com/ogham/exa)
-- tree (http://mama.indstate.edu/users/ice/tree/)
+- erdtree (https://github.com/solidiquis/erdtree)
 - fd (https://github.com/sharkdp/fd)
 - bat (https://github.com/sharkdp/bat)
 - fzf (https://github.com/junegunn/fzf)
 - zoxide (https://github.com/ajeetdsouza/zoxide)
 - dog (https://github.com/ogham/dog)
 - neovim (https://github.com/neovim/neovim)
+- lazygit (https://github.com/jesseduffield/lazygit)
 
 ## Makefile task
 Running the `make` command will display help
 - `make setup` - All setup. also run this command to update
 - `make doctor` - Check if the package has been successfully installed
+- `make create-symlinks` - Create all symbolic link
+- `make unlinks` - Unlink all symbolic link
 
 ## Key bindings
 - `Ctrl+r` : History search
-- `Ctrl+s` : Directory search (using `fd`)
+- `Ctrl+f` : Directory search (using `fd`)
 - `Ctrl+v` : Variable search
-- `Ctrl+g` : Git log search
+- `Ctrl+l` : Git log search
 - `Ctrl+c` : `cd` with interactive selection (using `zoxide`)
 
 ## Requires
@@ -47,7 +50,7 @@ Running the `make` command will display help
 ## Codespaces
 You can also start **Github Codespaces** and try it out
 ```
-cd /workspaces/dotfiles
+cd ~/.dotfiles
 make setup
 
 ...
