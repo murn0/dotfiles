@@ -6,7 +6,4 @@ function fish_user_key_bindings
   # Ctrl+r : コマンド履歴検索, Ctrl+f : ファイル、ディレクトリパス検索, Ctrl+v : 変数検索, Ctrl+l : git log検索
   fzf_configure_bindings --history=\cr --directory=\cf --variables=\cv --git_log=\cl --git_status --processes
 
-  # Ctrl+g : gituiを起動
-  bind \cg gitui
-  
 end
