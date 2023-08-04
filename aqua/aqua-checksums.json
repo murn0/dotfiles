@@ -1,33 +1,33 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.1/zoxide-0.9.1-aarch64-apple-darwin.tar.gz",
-      "checksum": "FFFCB1B6BEA7EE44CBED6E208F5A94A650F3C05F514AF14F4C22350C78164A1BAC663FB630EE1788A288A57268F0C741F1BCF749126ADB6A1D4BE769BAD9A579",
+      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.2/zoxide-0.9.2-aarch64-apple-darwin.tar.gz",
+      "checksum": "6E4E4805D2EADEB1E6C81B65D7EBB189DE49E7030406B2154790ED20FF8F9D113B5DB77707022B1CCF3669928AB842383B0ACB5729D91BC6ABC0C2236A5F64D5",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.1/zoxide-0.9.1-aarch64-pc-windows-msvc.zip",
-      "checksum": "26373695EED9FCC36CEA9105369E9035C57FD0A109BA1B61140AFC80A39E44F682643906D956AB9A63FFC9E28E2B5826ED9431D58F483DD3EAE29431A0106E62",
+      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.2/zoxide-0.9.2-aarch64-pc-windows-msvc.zip",
+      "checksum": "6150E1CE997E1D2CC8F8580BD627BB384766D06DC6662779B32D5BC818232572263D3D1F4EDB3A244C52B29B9A30E4510171F1BF4AADF62FEAEBCF3666EFE986",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.1/zoxide-0.9.1-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "B14BDDE7997F66B9B6D5F57F69F777077A2FFC80309FF1E981FB13718376333F99705796439D09FDF8E970CCA262D1F2D3ADA433043D0AC2539C42C9297753B1",
+      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.2/zoxide-0.9.2-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "242A163C87AC025489C96289FA011E7CF347663E743A1C7628994C7AC86A845B5188E5C6DBAD92F676FAC8B89CC176D0BB91112EDF217FAE57190CA8C124F44A",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.1/zoxide-0.9.1-x86_64-apple-darwin.tar.gz",
-      "checksum": "9F857C130E324E717B4F1BF68F8D72B2A7DEC64F8D105071390E9AB85F91EE477E8100511C10DF93D30A78D0889CE0DE49F3B6B57EB414D2701A7883AA9A3402",
+      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.2/zoxide-0.9.2-x86_64-apple-darwin.tar.gz",
+      "checksum": "214982FBDD1633A22E237403B22EEF1338FB62920A475D1756E9403CB34E0B78540EE677D1834F9800FAAF5D5F8EB9B842217FD879301D86E31C82C29A0577AA",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.1/zoxide-0.9.1-x86_64-pc-windows-msvc.zip",
-      "checksum": "D42531E200981D55941455B035CFF3CDF4A5BA1BB471B2A21D218F3B7D61B65EECE6775B250DF993D2CF5C758DBB096C9BB096E5671F59E69D149923F4EFE541",
+      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.2/zoxide-0.9.2-x86_64-pc-windows-msvc.zip",
+      "checksum": "3757AB00E31D22D10E5D8EBF99401CD1332B5402F626E8AB69D8C447BDFF3266C430874BF41C7ABBD4A3C69FB754593CE106603034AF2652E0204678F6C324E6",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.1/zoxide-0.9.1-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "E6F58926B88D6254B7B1069767AC40005372353DCB8E1578999F93D24AFB7D02C9A9629AE292F136EB26579234751C68A4D743D9DBA2D6DFB37510C37D61043A",
+      "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.2/zoxide-0.9.2-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "D91F984DEB3464BA3E2B45E27EFFE5152671FAA365DD4A44BF4F6DD7995641EBABB5481DA2C930B7D811F65CFA7389E37293C9396BB95752936AE874FEE68AEF",
       "algorithm": "sha512"
     },
     {
