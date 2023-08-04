@@ -4,3 +4,5 @@ gui:
 
 os:
   editPreset: 'vscode'
+
+promptToReturnFromSubprocess: false # サブプロセスの終了時に確認画面を表示しない
