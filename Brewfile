@@ -7,8 +7,6 @@ tap "homebrew/core"
 brew "coreutils"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Run arbitrary commands when files change
-brew "entr"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Plugin manager for the Fish shell
@@ -33,8 +31,6 @@ cask "adobe-creative-cloud", args: { appdir: "/Applications" }
 cask "bartender", args: { appdir: "/Applications" }
 # Tool to customize input devices and automate computer systems
 cask "bettertouchtool"
-# Graphical configurator for Kaleidoscope-powered keyboards
-cask "chrysalis"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Screen capturing tool
@@ -53,8 +49,6 @@ cask "google-japanese-ime", args: { appdir: "/Applications" }
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Keyboard customizer
-cask "karabiner-elements"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
 # Interface for reading and syncing eBooks
@@ -75,6 +69,8 @@ cask "tableplus", args: { appdir: "/Applications" }
 cask "transmit", args: { appdir: "/Applications" }
 # Open-source code editor
 cask "visual-studio-code"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 mas "Craft", id: 1487937127
 mas "Image Tool+", id: 1524216218
 mas "LINE", id: 539883307
