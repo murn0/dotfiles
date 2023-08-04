@@ -116,6 +116,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/jesseduffield/lazygit/v0.39.4/lazygit_0.39.4_Darwin_arm64.tar.gz",
+      "checksum": "9ED6EEF0F4CFFCE01BFF31A68E7BDACC9812B037276E3F46EF1154F3C4EC6892",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jesseduffield/lazygit/v0.39.4/lazygit_0.39.4_Darwin_x86_64.tar.gz",
+      "checksum": "B84ED134857365E01D3D51B0A3072AE629E84B7B67EAC86EAB0C9DFBB9493159",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jesseduffield/lazygit/v0.39.4/lazygit_0.39.4_Linux_arm64.tar.gz",
+      "checksum": "872E290979ADDFA274BB4AEC39661002E7708C3B8EE6C400A493912F72620DE0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jesseduffield/lazygit/v0.39.4/lazygit_0.39.4_Linux_x86_64.tar.gz",
+      "checksum": "EF30959442A62C0395910A2835E01E3F99FE1C740DAD92DB881B1989D765F15B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jesseduffield/lazygit/v0.39.4/lazygit_0.39.4_Windows_x86_64.zip",
+      "checksum": "B0627531546569D8824029EA6C50932EFA4C7BB7A1A7F715C5B3C35F6DBD47DC",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/junegunn/fzf/0.42.0/fzf-0.42.0-darwin_amd64.zip",
       "checksum": "8606714F086BC1A06CF80CCF455E9B83431F447594915AF494B1510077ACC72A9D0742BC6B53FB8CA79F5C096A2CF994C1559F1118AA1DDBC339F68B757875CD",
       "algorithm": "sha512"
