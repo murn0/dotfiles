@@ -79,7 +79,6 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Tailscale", id: 1475387142
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
-vscode "adam-bender.commit-message-editor"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "bmalehorn.vscode-fish"
 vscode "christian-kohler.path-intellisense"
@@ -101,7 +100,6 @@ vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "mosapride.zenkaku"
 vscode "ms-azuretools.vscode-docker"
-vscode "MS-CEINTL.vscode-language-pack-ja"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
@@ -118,6 +116,5 @@ vscode "satokaz.vscode-bs-ctrlchar-remover"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "Tailscale.vscode-tailscale"
 vscode "tamasfe.even-better-toml"
-vscode "tranhl.find-then-jump"
 vscode "wayou.vscode-todo-highlight"
 vscode "wix.vscode-import-cost"
