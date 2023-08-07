@@ -82,6 +82,8 @@ jobs:
       ! failure() && ! cancelled() && github.event.pull_request.user.login == 'renovate[bot]' && contains(github.event.pull_request.body, ' **Automerge**: Enabled.')
     uses: ./.github/workflows/wc-enable-auto-merge.yaml
     permissions: {}
+    with:
+      app_id: "op://Github/uhto3hzapjcxicwm664wvh4zu4/AppID"
+      app_secret: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
     secrets:
-      gh_app_id: ${{secrets.gh_app_id}}
-      gh_app_private_key: ${{secrets.gh_app_private_key}}
+      op_service_account_token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
