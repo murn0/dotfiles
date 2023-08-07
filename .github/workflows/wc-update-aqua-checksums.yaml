@@ -71,7 +71,8 @@ jobs:
           fi
           echo "ref=$ref" >> "$GITHUB_OUTPUT"
 
-      - uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
+      - name: Load secrets
+        uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
         id: op-load-secret
         with:
           export-env: false
