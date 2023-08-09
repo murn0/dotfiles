@@ -7,6 +7,11 @@ jobs:
     permissions:
       pull-requests: write
     uses: ./.github/workflows/wc-auto-add-label.yaml
+    with:
+      app_id: "op://Github/uhto3hzapjcxicwm664wvh4zu4/AppID"
+      app_secret: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
+    secrets:
+      op_service_account_token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
 
   path-filter:
     outputs:
