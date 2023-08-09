@@ -1,21 +1,140 @@
 ---
 name: update-aqua-checksums
+
 on:
   workflow_call:
+    inputs:
+      aqua_policy_config:
+        required: false
+        type: string
+      aqua_version:
+        required: true
+        type: string
+      policy_allow:
+        required: false
+        type: string
+      working_directory:
+        required: false
+        default: ""
+        type: string
+      prune:
+        required: false
+        default: false
+        type: boolean
+      ref:
+        required: false
+        type: string
+      runs-on:
+        required: false
+        type: string
+        default: '"ubuntu-latest"'
+        description: |
+          JSON string for runs-on.
+          e.g.
+          runs-on: '"macos-latest"'
+          runs-on: '["foo"]'
+      app_id:
+        required: true
+        type: string
+        description: The Secret Reference URL for the AppID stored in 1Password
+      app_secret:
+        required: true
+        type: string
+        description: The Secret Reference URL for the AppSecret stored in 1Password
     secrets:
-      gh_app_id:
+      op_service_account_token:
         required: true
-      gh_app_private_key:
-        required: true
+
+env:
+  AQUA_POLICY_CONFIG: ${{inputs.aqua_policy_config}}
+  AQUA_LOG_COLOR: always
+
+permissions: {}
+
 jobs:
   update-aqua-checksums:
     # Update aqua-checksums.json and push a commit
-    uses: aquaproj/update-checksum-workflow/.github/workflows/update-checksum.yaml@01a3dfca0b401e2fa1ff11f2b840d227806deca1 # v0.1.7
+    runs-on: ${{fromJSON(inputs.runs-on)}}
     permissions:
-      contents: read
-    with:
-      aqua_version: v2.10.1
-      prune: true
-    secrets:
-      gh_app_id: ${{secrets.gh_app_id}}
-      gh_app_private_key: ${{secrets.gh_app_private_key}}
+      contents: read # To checkout private repository
+    steps:
+      - name: Get ref
+        id: ref
+        run: |
+          set -eu
+          ref=""
+          case "$GITHUB_EVENT_NAME" in
+            "pull_request" ) ref="${{github.event.pull_request.head.sha}}";;
+          esac
+          if [ -n "${{inputs.ref}}" ]; then
+            ref="${{inputs.ref}}"
+          fi
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+
+      - name: Load secrets
+        uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
+        id: op-load-secret
+        with:
+          export-env: false
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          APP_ID: ${{ inputs.app_id }}
+          APP_SECRET: ${{ inputs.app_secret }}
+
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92 # v1.8.0
+        with:
+          app_id: ${{steps.op-load-secret.outputs.APP_ID}}
+          private_key: ${{steps.op-load-secret.outputs.APP_SECRET}}
+
+      - name: Get skip_push
+        id: skip_push
+        run: |
+          set -eu
+          skip_push=""
+          case "$GITHUB_EVENT_NAME" in
+            "pull_request" ) skip_push="${{github.event.pull_request.head.repo.fork}}";;
+          esac
+          if [ -z "$skip_push" ]; then
+            skip_push=false
+          fi
+          if [ "$TOKEN_TYPE" = "empty" ]; then
+            skip_push=false
+          fi
+          echo "skip_push=$skip_push" >> "$GITHUB_OUTPUT"
+        env:
+          TOKEN_TYPE: ${{steps.generate_token.outputs.token_type}}
+
+      - name: Checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+        with:
+          ref: ${{steps.ref.outputs.ref}}
+
+      - uses: aquaproj/aqua-installer@36dc5833b04eb63f06e3bb818aa6b7a6e6db99a9 # v2.1.2
+        if: steps.generate_token.outputs.token_type == 'empty'
+        # Install ghcp
+        with:
+          aqua_version: ${{inputs.aqua_version}}
+        env:
+          AQUA_GITHUB_TOKEN: ${{github.token}}
+      - uses: aquaproj/aqua-installer@36dc5833b04eb63f06e3bb818aa6b7a6e6db99a9 # v2.1.2
+        if: ${{steps.generate_token.outputs.token_type != 'empty'}}
+        # Install ghcp
+        with:
+          aqua_version: ${{inputs.aqua_version}}
+          policy_allow: ${{inputs.policy_allow}}
+        env:
+          AQUA_GITHUB_TOKEN: ${{steps.generate_token.outputs.token}}
+
+      - uses: aquaproj/update-checksum-action@2fb7f676d407d4fb8c2c466c19d09d3ddec4f82f # v0.2.2
+        with:
+          skip_push: ${{steps.skip_push.outputs.skip_push}}
+          prune: ${{inputs.prune}}
+          working_directory: ${{inputs.working_directory}}
+        env:
+          # To trigger GitHub Actions Workflow by pushing a commit, GitHub App token is required.
+          # github.token doesn't trigger GitHub Actions Workflow.
+          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
+          # > When you use the repository's GITHUB_TOKEN to perform tasks, events triggered by the GITHUB_TOKEN, with the exception of workflow_dispatch and repository_dispatch, will not create a new workflow run.
+          GITHUB_TOKEN: ${{steps.generate_token.outputs.token}}

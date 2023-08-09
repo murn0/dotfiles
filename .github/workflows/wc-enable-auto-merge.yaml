@@ -2,23 +2,43 @@
 name: enable-auto-merge
 on:
   workflow_call:
+    inputs:
+      app_id:
+        required: true
+        type: string
+        description: The Secret Reference URL for the AppID stored in 1Password
+      app_secret:
+        required: true
+        type: string
+        description: The Secret Reference URL for the AppSecret stored in 1Password
     secrets:
-      gh_app_id:
+      op_service_account_token:
         required: true
-      gh_app_private_key:
-        required: true
+
+permissions: {}
 jobs:
   enable-auto-merge:
     # Enable automerge to merge pull requests from Renovate automatically.
     runs-on: ubuntu-latest
     permissions: {}
     steps:
+      - name: Load secrets
+        uses: 1password/load-secrets-action@d1a4e73495bde3551cf63f6c048588b8f734e21d # v1.3.1
+        id: op-load-secret
+        with:
+          export-env: false
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          APP_ID: ${{ inputs.app_id }}
+          APP_SECRET: ${{ inputs.app_secret }}
+
       - name: Generate token
         id: generate_token
         uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92 # v1.8.0
         with:
-          app_id: ${{secrets.gh_app_id}}
-          private_key: ${{secrets.gh_app_private_key}}
+          app_id: ${{steps.op-load-secret.outputs.APP_ID}}
+          private_key: ${{steps.op-load-secret.outputs.APP_SECRET}}
+
       - run: gh -R "$GITHUB_REPOSITORY" pr merge --squash --auto --delete-branch "$PR_NUMBER"
         env:
           GITHUB_TOKEN: ${{steps.generate_token.outputs.token}} # Use GitHub App to trigger GitHub Actions Workflow by merge commit.
