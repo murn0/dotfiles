@@ -82,6 +82,7 @@ mas "Xcode", id: 497799835
 vscode "artdiniz.quitcontrol-vscode"
 vscode "bmalehorn.vscode-fish"
 vscode "christian-kohler.path-intellisense"
+vscode "CodeSandbox-io.codesandbox-projects"
 vscode "DavidLGoldberg.jumpy2"
 vscode "EditorConfig.EditorConfig"
 vscode "Equinusocio.vsc-community-material-theme"
