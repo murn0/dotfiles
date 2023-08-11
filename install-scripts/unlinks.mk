@@ -15,7 +15,8 @@ all: unlink-fish-symlinks \
 	unlink-zsh-symlinks \
 	unlink-starship-symlinks \
 	unlink-erdtree-symlinks \
-	unlink-lazygit-symlinks
+	unlink-lazygit-symlinks \
+	unlink-wezterm-symlinks
 
 unlink-fish-symlinks: ## Unlink symbolic link for fish settings
 	@echo "${RED}▓▒░ Unlink symbolic link for Fish${RESET}"
@@ -46,3 +47,7 @@ unlink-erdtree-symlinks: ## Unlink symbolic link for erdtree settings
 unlink-lazygit-symlinks: ## Unlink symbolic link for lazygit settings
 	@echo "${RED}▓▒░ Unlink symbolic link for lazygit${RESET}"
 	@unlink $(XDG_CONFIG_HOME_PATH)/lazygit/config.yml
+
+unlink-wezterm-symlinks: ## Unlink symbolic link for wezterm settings
+	@echo "${RED}▓▒░ Unlink symbolic link for wezterm${RESET}"
+	@unlink $(XDG_CONFIG_HOME_PATH)/wezterm/wezterm.lua

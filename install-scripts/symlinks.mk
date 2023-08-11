@@ -17,7 +17,8 @@ all: create-fish-symlinks \
 	create-zsh-symlinks \
 	create-starship-symlinks \
 	create-erdtree-symlinks \
-	create-lazygit-symlinks
+	create-lazygit-symlinks \
+	create-wezterm-symlinks
 
 create-fish-symlinks: ## Create symbolic link for fish settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Fish${RESET}"
@@ -53,3 +54,8 @@ create-lazygit-symlinks: ## Create symbolic link for lazygit settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for lazygit${RESET}"
 	@mkdir -p $(XDG_CONFIG_HOME_PATH)/lazygit
 	@ln -fnsv $(DOTFILES_CONFIG_PATH)/lazygit/config.yml $(XDG_CONFIG_HOME_PATH)/lazygit/config.yml
+
+create-wezterm-symlinks: ## Create symbolic link for wezterm settings
+	@echo "${PURPLE}▓▒░ Create symbolic link for wezterm${RESET}"
+	@mkdir -p $(XDG_CONFIG_HOME_PATH)/wezterm
+	@ln -fnsv $(DOTFILES_CONFIG_PATH)/wezterm/wezterm.lua $(XDG_CONFIG_HOME_PATH)/wezterm/wezterm.lua
