@@ -33,7 +33,7 @@ customCommands:
         command: 'gh pr list --json number,title,headRefName,updatedAt --jq ''.[] | .result = (.number|tostring)+","+.title+","+.headRefName+","+.updatedAt | .result'''
         filter: '^(?P<number>\d+),(?P<title>[^,]+),(?P<branch>[^,]+),(?P<update>.+)$'
         valueFormat: '{{ .number }}'
-        labelFormat: '{{ .update | magenta }} #{{ .number | green | bold }} {{ .title }} {{ .branch | yellow }}'
+        labelFormat: '#{{ .number | green | bold }} {{ .title }} {{ .branch | yellow }}'
       - type: 'menu' # マージ方法を選択
         title: 'What kind of merge type?'
         key: 'MergeType'
