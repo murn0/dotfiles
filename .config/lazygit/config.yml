@@ -6,3 +6,40 @@ os:
   editPreset: 'vscode'
 
 promptToReturnFromSubprocess: false # サブプロセスの終了時に確認画面を表示しない
+
+customCommands:
+  - key: '<c-v>'
+    context: 'global'
+    command: "code $(pwd)"
+    description: "Open current directory in VSCode"
+  - key: '*'
+    context: 'localBranches'
+    command: 'gh pr create -w'
+    description: "Open the web browser to create a pull request"
+    subprocess: true
+  - key: '<c-l>'
+    context: 'localBranches'
+    command: 'gh pr merge {{index .PromptResponses 0}} -d{{index .PromptResponses 1}}'
+    description: "Merge a pull request"
+    prompts:
+      - type: 'menuFromCommand'
+        title: 'Pull requests:'
+        key: 'PullRequest'
+        command: 'gh pr list --json number,title,headRefName,updatedAt --jq ''.[] | .result = (.number|tostring)+","+.title+","+.headRefName+","+.updatedAt | .result'''
+        filter: '^(?P<number>\d+),(?P<title>[^,]+),(?P<branch>[^,]+),(?P<update>.+)$'
+        valueFormat: '{{ .number }}'
+        labelFormat: '{{ .update | magenta }} #{{ .number | green | bold }} {{ .title }} {{ .branch | yellow }}'
+      - type: 'menu'
+        title: 'What kind of merge type?'
+        key: 'MergeType'
+        options:
+          - value: 's'
+            name: 'Squash merge'
+          - value: 'r'
+            name: 'Rebase merge'
+          - value: 'm'
+            name: 'Normal merge'
+      - type: 'confirm'
+        key: 'Confirm'
+        title: 'Merge a pull request'
+        body: 'Are you sure you want to merge pull request #{{index .PromptResponses 0 }}?'
