@@ -15,6 +15,7 @@ git:
 
 customCommands:
   - key: '<c-v>' # Ctrl-v
+  - key: '~'
     context: 'global'
     command: "code $(pwd)"
     description: "VSCodeで現在のディレクトリを開く"
@@ -23,6 +24,9 @@ customCommands:
     command: 'gh pr create -w'
     description: "プルリクエストの作成画面をブラウザで開く"
     subprocess: true
+    command: 'gh run list --limit 5'
+    description: 'GithubActionsの履歴を表示'
+    stream: true
   - key: '<c-l>' # Ctrl-l
     context: 'localBranches'
     command: 'gh pr merge {{index .PromptResponses 0}} -d{{index .PromptResponses 1}}'
