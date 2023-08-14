@@ -7,6 +7,11 @@ os:
 
 promptToReturnFromSubprocess: false # サブプロセスの終了時に確認画面を表示しない
 
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never # diffエディターにdeltaを指定
+
 customCommands:
   - key: '<c-v>'
     context: 'global'
