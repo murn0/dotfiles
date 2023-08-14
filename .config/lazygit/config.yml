@@ -1,6 +1,7 @@
 gui:
   language: 'ja'
   nerdFontsVersion: '3'
+  commandLogSize: 18
 
 os:
   editPreset: 'vscode'
