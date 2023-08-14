@@ -1,8 +1,47 @@
 gui:
   language: 'ja'
   nerdFontsVersion: '3'
+  commandLogSize: 18
 
 os:
   editPreset: 'vscode'
 
 promptToReturnFromSubprocess: false # サブプロセスの終了時に確認画面を表示しない
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never # diffエディターにdeltaを指定
+
+customCommands:
+  - key: '~'
+    context: 'global'
+    command: 'gh run list --limit 5'
+    description: 'GithubActionsの履歴を表示'
+    stream: true
+  - key: '<c-l>' # Ctrl-l
+    context: 'localBranches'
+    command: 'gh pr merge {{index .PromptResponses 0}} -d{{index .PromptResponses 1}}'
+    description: "プルリクエストをマージ"
+    prompts:
+      - type: 'menuFromCommand'
+        title: 'プルリクエスト一覧:'
+        key: 'PullRequest'
+        command: 'gh pr list --json number,title,headRefName,updatedAt --jq ''.[] | .result = (.number|tostring)+","+.title+","+.headRefName+","+.updatedAt | .result'''
+        filter: '^(?P<number>\d+),(?P<title>[^,]+),(?P<branch>[^,]+),(?P<update>.+)$'
+        valueFormat: '{{ .number }}'
+        labelFormat: '#{{ .number | green | bold }} {{ .title }} {{ .branch | yellow }}'
+      - type: 'menu'
+        title: 'マージ方法を選択'
+        key: 'MergeType'
+        options:
+          - value: 's'
+            name: 'Squash merge'
+          - value: 'r'
+            name: 'Rebase merge'
+          - value: 'm'
+            name: 'Normal merge'
+      - type: 'confirm'
+        key: 'Confirm'
+        title: 'Merge a pull request'
+        body: '本当に #{{index .PromptResponses 0 }} のプルリクエストをマージしますか？'
