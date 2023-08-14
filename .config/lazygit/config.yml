@@ -13,29 +13,29 @@ git:
     pager: delta --dark --paging=never # diffエディターにdeltaを指定
 
 customCommands:
-  - key: '<c-v>' # Ctrl-v でVSCodeを起動
+  - key: '<c-v>' # Ctrl-v
     context: 'global'
     command: "code $(pwd)"
-    description: "Open current directory in VSCode"
+    description: "VSCodeで現在のディレクトリを開く"
   - key: '*'
-    context: 'localBranches' # Githubのプルリクエストの作成画面をブラウザで開く
+    context: 'localBranches'
     command: 'gh pr create -w'
-    description: "Open the web browser to create a pull request"
+    description: "プルリクエストの作成画面をブラウザで開く"
     subprocess: true
-  - key: '<c-l>' # Ctrl-l で選択したプルリクエストをマージしてローカルブランチを削除する
+  - key: '<c-l>' # Ctrl-l
     context: 'localBranches'
     command: 'gh pr merge {{index .PromptResponses 0}} -d{{index .PromptResponses 1}}'
-    description: "Merge a pull request"
+    description: "プルリクエストをマージ"
     prompts:
-      - type: 'menuFromCommand' # プルリクエスト一覧を取得
-        title: 'Pull requests:'
+      - type: 'menuFromCommand'
+        title: 'プルリクエスト一覧:'
         key: 'PullRequest'
         command: 'gh pr list --json number,title,headRefName,updatedAt --jq ''.[] | .result = (.number|tostring)+","+.title+","+.headRefName+","+.updatedAt | .result'''
         filter: '^(?P<number>\d+),(?P<title>[^,]+),(?P<branch>[^,]+),(?P<update>.+)$'
         valueFormat: '{{ .number }}'
         labelFormat: '#{{ .number | green | bold }} {{ .title }} {{ .branch | yellow }}'
-      - type: 'menu' # マージ方法を選択
-        title: 'What kind of merge type?'
+      - type: 'menu'
+        title: 'マージ方法を選択'
         key: 'MergeType'
         options:
           - value: 's'
@@ -47,4 +47,4 @@ customCommands:
       - type: 'confirm'
         key: 'Confirm'
         title: 'Merge a pull request'
-        body: 'Are you sure you want to merge pull request #{{index .PromptResponses 0 }}?'
+        body: '本当に #{{index .PromptResponses 0 }} のプルリクエストをマージしますか？'
