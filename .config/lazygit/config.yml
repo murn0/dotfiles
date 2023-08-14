@@ -16,8 +16,8 @@ git:
 customCommands:
   - key: '~'
     context: 'global'
-    command: 'gh run list --limit 5'
-    description: 'GithubActionsの履歴を表示'
+    command: 'gh run watch'
+    description: '実行中のGitHub Actionsを表示'
     stream: true
   - key: '<c-l>' # Ctrl-l
     context: 'localBranches'
