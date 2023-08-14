@@ -18,7 +18,8 @@ customCommands:
     context: 'global'
     command: 'gh run watch'
     description: '実行中のGitHub Actionsを表示'
-    stream: true
+    subprocess: true
+    # stream: true
   - key: '<c-l>' # Ctrl-l
     context: 'localBranches'
     command: 'gh pr merge {{index .PromptResponses 0}} -d{{index .PromptResponses 1}}'
