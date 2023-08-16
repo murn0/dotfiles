@@ -80,7 +80,6 @@ mas "Tailscale", id: 1475387142
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
 vscode "artdiniz.quitcontrol-vscode"
-vscode "bmalehorn.vscode-fish"
 vscode "christian-kohler.path-intellisense"
 vscode "CodeSandbox-io.codesandbox-projects"
 vscode "DavidLGoldberg.jumpy2"
