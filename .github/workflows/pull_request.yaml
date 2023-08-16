@@ -41,7 +41,7 @@ jobs:
               - aqua/aqua-checksums.json
               - .github/workflows/pull_request.yaml
               - .github/workflows/wc-update-aqua-checksums.yaml
-            test
+            test:
               - aqua/aqua.yaml
               - aqua/aqua-checksums.json
               - aqua/imports/global/*.yaml
