@@ -18,6 +18,7 @@ jobs:
       ghalint: ${{steps.changes.outputs.ghalint}}
       renovate-config-validator: ${{steps.changes.outputs.renovate-config-validator}}
       update-aqua-checksums: ${{steps.changes.outputs.update-aqua-checksums}}
+      test: ${{steps.changes.outputs.test}}
     runs-on: ubuntu-latest
     permissions: {}
     steps:
@@ -40,6 +41,14 @@ jobs:
               - aqua/aqua-checksums.json
               - .github/workflows/pull_request.yaml
               - .github/workflows/wc-update-aqua-checksums.yaml
+            test
+              - aqua/aqua.yaml
+              - aqua/aqua-checksums.json
+              - aqua/imports/global/*.yaml
+              - install.sh
+              - install-scripts/*.mk
+              - Makefile
+              - .github/workflows/wc-test.yaml
 
   ghalint:
     needs: path-filter
@@ -67,6 +76,12 @@ jobs:
       app_secret: "op://Github/uhto3hzapjcxicwm664wvh4zu4/private_key"
     secrets:
       op_service_account_token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+
+  test:
+    needs: path-filter
+    if: needs.path-filter.outputs.test == 'true'
+    uses: ./.github/workflows/wc-test.yaml
+    permissions: {}
 
   status-check:
     needs:
