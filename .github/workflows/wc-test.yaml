@@ -5,8 +5,15 @@ jobs:
   test:
     strategy:
       matrix:
-        os: [ubuntu-22.04, ubuntu-20.04]
-    runs-on: ${{ matrix.os }}
+        os:
+          - ubuntu:20.04
+          - ubuntu:22.04
+          - debian:stretch  # Debian 9
+          - debian:buster   # Debian 10
+          - debian:bullseye # Debian 11
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ matrix.os }}
     permissions: {}
     steps:
       - name: Checkout
@@ -14,3 +21,4 @@ jobs:
       - name: setup dotfiles
         run: |
           make setup
+          make test
