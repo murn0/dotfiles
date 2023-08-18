@@ -5,20 +5,24 @@ jobs:
   test:
     strategy:
       matrix:
-        os:
+        image:
           - ubuntu:20.04
           - ubuntu:22.04
-          - debian:stretch  # Debian 9
-          - debian:buster   # Debian 10
-          - debian:bullseye # Debian 11
+          - debian:10
+          - debian:11
     runs-on: ubuntu-latest
-    container:
-      image: ${{ matrix.os }}
     permissions: {}
     steps:
       - name: Checkout
         uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
       - name: setup dotfiles
         run: |
-          pwd
-          whoami
+          docker build . \
+            --file Dockerfile \
+            --platform linux/amd64 \
+            --tag test-container \
+            --build-arg DOCKER_IMAGE_NAME=${{ matrix.image }}
+          docker container run \
+            --mount type=bind,source=${{ github.workspace }},target=/home/user \
+            test-container \
+            /bin/bash -c 'make setup && make test'
