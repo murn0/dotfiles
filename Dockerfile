@@ -12,10 +12,13 @@ ARG USERNAME=user
 ARG GROUPNAME=user
 ARG UID=1000
 ARG GID=1000
+ARG PASSWORD=user
 RUN <<EOF
     set -e
     groupadd -g $GID $GROUPNAME
     useradd -m -s /bin/bash -u $UID -g $GID $USERNAME
+    echo $USERNAME:$PASSWORD | chpasswd
+    echo "$USERNAME   ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 EOF
 USER $USERNAME
 WORKDIR /home/$USERNAME/
