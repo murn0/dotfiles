@@ -1,6 +1,13 @@
 ARG DOCKER_IMAGE_NAME
 FROM ${DOCKER_IMAGE_NAME}
 
+COPY install-scripts/docker-entrypoint.sh /tmp/docker-entrypoint.sh
+RUN <<EOF
+    set -e
+    chmod +x /tmp/docker-entrypoint.sh
+    /bin/bash /tmp/docker-entrypoint.sh
+EOF
+
 ARG USERNAME=user
 ARG GROUPNAME=user
 ARG UID=1000
