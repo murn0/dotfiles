@@ -27,6 +27,8 @@ cask "1password", args: { appdir: "/Applications" }
 cask "1password-cli"
 # Collection of apps and services for photography, design, video, web, and UX
 cask "adobe-creative-cloud", args: { appdir: "/Applications" }
+# Enable Windows-like alt-tab
+cask "alt-tab"
 # Menu bar icon organizer
 cask "bartender", args: { appdir: "/Applications" }
 # Tool to customize input devices and automate computer systems
@@ -37,6 +39,8 @@ cask "cleanmymac"
 cask "cleanshot"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor", args: { appdir: "/Applications" }
+# Voice and text chat software
+cask "discord"
 # Web browser
 cask "firefox", args: { appdir: "/Applications" }
 # Japanese programming font which is a composed of Hack and GenJyuu-Gothic
@@ -80,7 +84,6 @@ mas "Tailscale", id: 1475387142
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
 vscode "artdiniz.quitcontrol-vscode"
-vscode "bmalehorn.vscode-fish"
 vscode "christian-kohler.path-intellisense"
 vscode "CodeSandbox-io.codesandbox-projects"
 vscode "DavidLGoldberg.jumpy2"
@@ -101,6 +104,7 @@ vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "mosapride.zenkaku"
 vscode "ms-azuretools.vscode-docker"
+vscode "MS-CEINTL.vscode-language-pack-ja"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
