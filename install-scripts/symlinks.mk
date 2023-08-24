@@ -18,7 +18,8 @@ all: create-fish-symlinks \
 	create-starship-symlinks \
 	create-erdtree-symlinks \
 	create-lazygit-symlinks \
-	create-wezterm-symlinks
+	create-wezterm-symlinks \
+	create-gh-dash-symlinks
 
 create-fish-symlinks: ## Create symbolic link for fish settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for Fish${RESET}"
@@ -59,3 +60,8 @@ create-wezterm-symlinks: ## Create symbolic link for wezterm settings
 	@echo "${PURPLE}▓▒░ Create symbolic link for wezterm${RESET}"
 	@mkdir -p $(XDG_CONFIG_HOME_PATH)/wezterm
 	@ln -fnsv $(DOTFILES_CONFIG_PATH)/wezterm/wezterm.lua $(XDG_CONFIG_HOME_PATH)/wezterm/wezterm.lua
+
+create-gh-dash-symlinks: ## Create symbolic link for gh-dash settings
+	@echo "${PURPLE}▓▒░ Create symbolic link for gh-dash${RESET}"
+	@mkdir -p $(XDG_CONFIG_HOME_PATH)/gh-dash
+	@ln -fnsv $(DOTFILES_CONFIG_PATH)/gh-dash/config.yml $(XDG_CONFIG_HOME_PATH)/gh-dash/config.yml
