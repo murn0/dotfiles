@@ -14,7 +14,7 @@ issuesSections:
   filters: is:open involves:@me -author:@me
 defaults:
   preview:
-    open: false
+    open: true
     width: 80
   prsLimit: 25
   issuesLimit: 25
