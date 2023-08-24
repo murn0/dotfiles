@@ -1,97 +1,209 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "custom"
+
 format = """
-[┌── ](bold white)\
+[╭╴](bold white)\
+$os\
 $shlvl\
-$status\
-$username\
-$directory\
-$git_branch\
-$git_status\
-$git_commit\
 $shell\
-$cmd_duration\
-$memory_usage\
-$battery\
-$time
-[└─](bold white)$character"""
+$all\
+$line_break\
+[╰╴](bold white)\
+$status\
+$localip\
+$character
+"""
 
 scan_timeout = 10
 
-[character]
-#success_symbol = "[❯](bold white)[❯](bold blue)[❯](bold cyan) "
-#error_symbol =   "[❯❯❯](bold red) "
-success_symbol = "[➤ ](bold white) "
-error_symbol =   "[➤ ](bold red) "
-# success_symbol = "[▶ ](bold white) "
-# error_symbol =   "[▶ ](bold red) "
-
-[shell]
-disabled = false
-zsh_indicator = "[Zsh](bold white)"
-fish_indicator = "[🐟](bold cyan)"
-format = "[on $indicator](white) "
-
-[shlvl]
-disabled = false
-format = "[ Lv.$shlvl ](bold black)"
-threshold = 1
-
-[username]
-disabled = true
-show_always = true
-style_user = "bold green"
-style_root = "bold red"
-format = "[ $user]($style) "
-
-[directory]
-style = "bold blue"
-read_only_style = "white"
-fish_style_pwd_dir_length = 3
-format = "[$read_only]($read_only_style)[  ]($style)[$path]($style) "
-truncation_length = 4 
-truncation_symbol = ".../"
-
-[git_status]
-conflicted = " "
-untracked  = "？"
-stashed    = " "
-modified   = " "
-staged     = " "
-renamed    = " "
-deleted    = " "
-style = "bold yellow"
-ahead = "▲ ${count}"
-behind = "▼ ${count}"
-diverged = "▲ ${ahead_count} ▼ ${behind_count}"
-
-[git_branch]
-format = "on [$symbol$branch](bold purple) "
-
-[cmd_duration]
-format = "took [ $duration](bold black)"
-
-[time]
-disabled = true
-format = 'at [ $time](gray) '
-time_format = "%T"
-utc_time_offset = "+9"
+add_newline = true
 
 [status]
-style = "red"
+disabled = false
 symbol = " "
 not_executable_symbol = "🚫"
 not_found_symbol = " "
 sigint_symbol = " "
 signal_symbol = " "
-format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
 map_symbol = true
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]](red) '
+
+[localip]
 disabled = false
+format = '[$localipv4 ](fg:green bold)'
+ssh_only = true
 
-[memory_usage]
-disabled = true
-threshold = -1
-symbol = " "
-style = "bold underline white"
+[character]
+disabled = false
+success_symbol = "[➤](white bold)"
+error_symbol =   "[✘](red bold)"
 
-[[battery.display]]
-threshold = 10
-style = "bold red"
+[os]
+disabled = false
+format = "[](fg:os_bg)[$symbol](fg:os_fg bg:os_bg)[ ](bg:os_bg)"
+
+[os.symbols]
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = ""
+CentOS = ""
+Debian = ""
+DragonFly = "🐉" # ""
+Emscripten = "🔗"
+EndeavourOS = "" # ""
+Fedora = ""
+FreeBSD = ""
+Garuda = ""
+Gentoo = ""
+HardenedBSD = "聯"
+Illumos = "🐦"
+Linux = ""
+Macos = ""
+Manjaro = ""
+Mariner = ""
+MidnightBSD = "🌘"
+Mint = ""
+NetBSD = ""
+NixOS = ""
+OpenBSD = "" # ""
+OpenCloudOS = "☁️"
+openEuler = ""
+openSUSE = ""
+OracleLinux = "⊂⊃"
+Pop = "" # ""
+Raspbian = ""
+Redhat = ""
+RedHatEnterprise = ""
+Redox = "🧪"
+Solus = "" # " "
+SUSE = ""
+Ubuntu = ""
+Unknown = ""
+Windows = ""
+
+[shell]
+disabled = false
+bash_indicator = "\uebca"
+zsh_indicator = "\ue795"
+fish_indicator = "🐟"
+format = """
+[](fg:shell_bg bg:os_bg)\
+[$indicator](fg:shell_fg bg:shell_bg)\
+[](fg:shell_bg bg:#none) \
+"""
+
+[shlvl]
+disabled = false
+threshold = 2
+format = """
+[](fg:shlvl_bg bg:none)\
+[Lv.$shlvl](fg:shlvl_fg bg:shlvl_bg bold)\
+[](fg:shlvl_bg bg:none) \
+"""
+
+[username]
+disabled = false
+show_always = false
+style_user = "fg:#FE7BE5 bg:username_bg bold"
+style_root = "fg:#C70039 bg:username_bg bold"
+format = """
+[](fg:username_bg bg:none)\
+[$user]($style)\
+[](fg:username_bg bg:none) \
+"""
+
+[directory]
+disabled = false
+fish_style_pwd_dir_length = 3
+truncation_length = 4
+truncation_symbol = ".../"
+format = """
+[](fg:directory_bg bg:none)\
+[\uf07c ](fg:directory_fg bg:directory_bg)\
+[](fg:directory_bg bg:directory_fg)\
+[ $path](fg:directory_bg bg:directory_fg bold)\
+[](fg:directory_fg bg:none) \
+"""
+
+[git_status]
+disabled = false
+ahead = "\ue33c ${count}"
+behind = "\ue33a ${count}"
+diverged = "\ue33c ${ahead_count} \ue33a ${behind_count}"
+modified = "[](fg:git_status_bg bg:none)[ ${count}](fg:yellow bg:git_status_bg)[](fg:git_status_bg bg:none) "
+untracked = "[](fg:git_status_bg bg:none)[? ${count}](fg:red bg:git_status_bg)[](fg:git_status_bg bg:none) "
+staged     = "[](fg:git_status_bg bg:none)[ ${count}](fg:blue bg:git_status_bg)[](fg:git_status_bg bg:none) "
+renamed    = "[](fg:git_status_bg bg:none)[ ${count}](fg:green bg:git_status_bg)[](fg:git_status_bg bg:none) "
+conflicted = "[](fg:git_status_bg bg:none)[conflicted](fg:red bg:git_status_bg)[](fg:git_status_bg bg:none) "
+up_to_date = "[](fg:git_status_bg bg:none)[✓](fg:green bg:git_status_bg)[](fg:git_status_bg bg:none) "
+stashed    = "[](fg:git_status_bg bg:none)[ ${count}](fg:blue bg:git_status_bg)[](fg:git_status_bg bg:none) "
+deleted    = "[](fg:git_status_bg bg:none)[✗ ${count}](fg:red bg:git_status_bg)[](fg:git_status_bg bg:none) "
+format = """
+$modified\
+$untracked\
+$staged\
+$renamed\
+$conflicted\
+$up_to_date\
+$stashed\
+$deleted\
+"""
+
+[git_branch]
+disabled = false
+truncation_length = 4
+truncation_symbol = ""
+# ignore_branches = ["master", "main"]
+format = """
+[](fg:git_branch_bg1 bg:none)\
+[\uf418](fg:git_branch_fg bg:git_branch_bg1)\
+[](fg:git_branch_bg1 bg:git_branch_bg2)\
+[ $branch](fg:git_branch_fg bg:git_branch_bg2 bold)\
+[](fg:git_branch_bg2 bg:none) \
+"""
+
+[cmd_duration]
+disabled = false
+show_notifications = false
+format = """
+[](fg:cmd_duration_bg1 bg:none)\
+[󱦟](fg:cmd_duration_fg bg:cmd_duration_bg1)\
+[](fg:cmd_duration_bg1 bg:cmd_duration_bg2)\
+[ $duration](fg:cmd_duration_fg bg:cmd_duration_bg2 bold)\
+[](fg:cmd_duration_bg2 bg:none) \
+"""
+
+[time]
+disabled = false
+time_format = "%T"
+utc_time_offset = "+9"
+format = """
+[](fg:time_bg1 bg:none)\
+[󱑃 ](fg:time_fg bg:time_bg1)\
+[](fg:time_bg1 bg:time_bg2)\
+[ $time](fg:time_fg bg:time_bg2 bold)\
+[](fg:time_bg2 bg:none) \
+"""
+
+[palettes.custom]
+os_bg = "#272829"
+os_fg = "#FFF6E0"
+shell_bg = "#177E89"
+shell_fg = "#3F37C9"
+shlvl_bg = "#352F44"
+shlvl_fg = "#B9B4C7"
+username_bg = "#313866"
+directory_bg = "#EFEFFB"
+directory_fg = "#3F37C9"
+git_status_bg = "#073642"
+git_branch_bg1 = "#FFC166"
+git_branch_bg2 = "#FF9B58"
+git_branch_fg = "#222325"
+cmd_duration_bg1 = "#DA627D"
+cmd_duration_bg2 = "#F7768E"
+cmd_duration_fg = "#F1F1F1"
+time_bg1 = "#E9A000"
+time_bg2 = "#FFB813"
+time_fg = "#0B2F14"
