@@ -67,13 +67,13 @@ config.keys = {
     -- 横にペインを追加
     {
         key = '|',
-        mods = 'CMD',
+        mods = 'CTRL|SHIFT',
         action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
     -- 縦にペインを追加
     {
-        key = '-',
-        mods = 'CMD|SHIFT',
+        key = '=',
+        mods = 'CTRL|SHIFT',
         action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
     },
     -- ペインを閉じる
