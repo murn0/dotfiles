@@ -111,6 +111,36 @@
       "algorithm": "sha512"
     },
     {
+      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.0/darwin-amd64",
+      "checksum": "0E64C760CBADA7320A6181D9946B398310C8D638D1BE790210DD1CF2480CCB88",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.0/darwin-arm64",
+      "checksum": "E8A25710238F9720DCC0092DA3F2AD444B1CC98F3A4027AFD5A1F73538353E4E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.0/linux-amd64",
+      "checksum": "6D07E381AFCF04B0BAECD47D39DA0B8A073F78F476EBDADC47E5D0E3EB2965AE",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.0/linux-arm64",
+      "checksum": "BA6195AA2957B34F2B9E19CA7F27F6199545FFF10F073874C6F2B8C40F25CF16",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.0/windows-amd64.exe",
+      "checksum": "45A194220E01E0A386B05FB118FF4E5EC9389E5AB7BC4353E3805F6E2323775A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.0/windows-arm64.exe",
+      "checksum": "749C02E1573732C250646A8BCCF0814CCCABED1289FB95841F7D6B0A5C00E73B",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/extrawurst/gitui/v0.23.0/gitui-linux-musl.tar.gz",
       "checksum": "31E3F39FD5F71F1C5E7C9EAFBBAEAFD1A6A714D04612130FE1716E92664F0656CAE2B89B03B4A4E90A7C09DE8C69F134128002BE81CCE14C4886CE25B3280306",
       "algorithm": "sha512"
