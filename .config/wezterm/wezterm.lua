@@ -20,6 +20,16 @@ wezterm.on('gui-startup', function(cmd)
     pane:split { direction = 'Bottom', size = 0.5 }
 end)
 
+-- タブのタイトル設定
+wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+    -- Ctrl+Shift+Zでズームしたペインのタイトルに🔎を付ける
+    local zoomed = tab.active_pane.is_zoomed and '🔎 ' or ' '
+
+    return {
+        { Text = zoomed .. tab.active_pane.title},
+    }
+end)
+
 -- 起動時にfishシェルをログインシェルの様に起動する(fish -l)
 config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 -- カラースキーム
@@ -71,6 +81,12 @@ config.keys = {
         key = 'w',
         mods = 'CMD',
         action = act.CloseCurrentPane { confirm = false },
+    },
+    -- ペインをズーム
+    {
+        key = 'z',
+        mods = 'CTRL|SHIFT',
+        action = act.TogglePaneZoomState,
     },
     -- ワークスペースの一覧を表示
     {
