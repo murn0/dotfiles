@@ -7,8 +7,8 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - fish shell (https://github.com/fish-shell/fish-shell) `v3.6.1`
 
 ## Fish shell plugin management
-- fisher (https://github.com/jorgebucaran/fisher)
-    - fzf.fish (https://github.com/PatrickF1/fzf.fish)
+- fisher (https://github.com/jorgebucaran/fisher) `v4.4.4`
+    - fzf.fish (https://github.com/PatrickF1/fzf.fish) `v10.0`
         - ⚠️ Attention to the version of dependent packages: `fish`,`fzf`,`fd`,`bat` (https://github.com/PatrickF1/fzf.fish#installation)
 
 ## Font
