@@ -4,7 +4,7 @@
 curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 ```
 ## Shell
-- fish shell (https://fishshell.com/)
+- fish shell (https://github.com/fish-shell/fish-shell) `v3.6.1`
 
 ## Fish shell plugin management
 - fisher (https://github.com/jorgebucaran/fisher)
@@ -13,22 +13,24 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 
 ## Font
 - Nerd Fonts (https://www.nerdfonts.com/)
-    - HackGen (https://github.com/yuru7/HackGen)
+    - HackGen (https://github.com/yuru7/HackGen) `v2.9.0`
 
 ## Prompt
-- starship (https://starship.rs/)
+- starship (https://github.com/starship/starship) `v1.16.0`
 
 ## Install packages
-- GithubCLI (https://github.com/cli/cli)
-- exa (https://github.com/ogham/exa)
-- erdtree (https://github.com/solidiquis/erdtree)
-- fd (https://github.com/sharkdp/fd)
-- bat (https://github.com/sharkdp/bat)
-- fzf (https://github.com/junegunn/fzf)
-- zoxide (https://github.com/ajeetdsouza/zoxide)
-- dog (https://github.com/ogham/dog)
-- neovim (https://github.com/neovim/neovim)
-- lazygit (https://github.com/jesseduffield/lazygit)
+- bat (https://github.com/sharkdp/bat) `v0.23.0`
+- delta (https://github.com/dandavison/delta) `v0.16.5`
+- dog (https://github.com/ogham/dog) `0.1.0`
+- erdtree (https://github.com/solidiquis/erdtree) `v3.1.2`
+- exa (https://github.com/ogham/exa) `v0.10.1`
+- fd (https://github.com/sharkdp/fd) `v8.7.0`
+- fzf (https://github.com/junegunn/fzf) `v0.42.0`
+- gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.0`
+- GithubCLI (https://github.com/cli/cli) `v2.33.0`
+- lazygit (https://github.com/jesseduffield/lazygit) `v0.40.2`
+- neovim (https://github.com/neovim/neovim) `v0.9.1`
+- zoxide (https://github.com/ajeetdsouza/zoxide) `v0.9.2`
 
 ## Makefile task
 Running the `make` command will display help
@@ -41,8 +43,8 @@ Running the `make` command will display help
 - `Ctrl+r` : History search
 - `Ctrl+f` : Directory search (using `fd`)
 - `Ctrl+v` : Variable search
-- `Ctrl+l` : Git log search
-- `Ctrl+c` : `cd` with interactive selection (using `zoxide`)
+- `Ctrl+g` : Git log search
+- `Ctrl+z` : `cd` with interactive selection (using `zoxide`)
 
 ## Requires
 ⚠️For MacOS, please install Homebrew first
