@@ -54,6 +54,7 @@ keybindings:
         gh pr merge --repo {{.RepoName}} {{.PrNumber}} --delete-branch --squash
 repoPaths:
     murn0/*: ~/Developments/murn0/*
+    murn0/dotfiles: ~/.dotfiles
 theme:
   ui:
     table:
