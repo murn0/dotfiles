@@ -6,5 +6,14 @@
         "github>aquaproj/aqua-renovate-config#1.8.0",
         "github>aquaproj/aqua-renovate-config:file#1.8.0(aqua/imports/*/.*\\.ya?ml)",
         "github>aquaproj/aqua-renovate-config:installer-script#1.8.0(install-aquaproj\\.mk)"
+    ],
+    "regexManagers": [
+        {
+            "datasourceTemplate": "github-releases",
+            "fileMatch": ["^README.md$"],
+            "matchStrings": [
+                "https://github.com/+(?<depName>(?<packageName>[^'\" .@/\\n]+/[^'\" @/\\n]+)(/[^'\" /@\\n]+)*)\\) \\`(?<currentValue>[^'\" \\n\\`]+)"
+            ]
+        }
     ]
 }
