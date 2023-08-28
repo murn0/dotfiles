@@ -141,21 +141,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/extrawurst/gitui/v0.24.0/gitui-linux-musl.tar.gz",
-      "checksum": "D60F1A4B4566D8AADC4BE3EB4F0994B7DDA7B1AB3D62BE065068BAC89FFA048501587B479C9FEC3A1E665D588022F1F47F72422D738ACD61ABCAA29058C1523A",
-      "algorithm": "sha512"
-    },
-    {
-      "id": "github_release/github.com/extrawurst/gitui/v0.24.0/gitui-mac.tar.gz",
-      "checksum": "2D5984EEA5588999A1AD9C24BA68E6611C2AF8B3BEEAB41D79EA53DF347F27E07597B8451DF28C90975CFF1EA5407861451C58FE1581FFFFCB0254AA6B98E4E8",
-      "algorithm": "sha512"
-    },
-    {
-      "id": "github_release/github.com/extrawurst/gitui/v0.24.0/gitui-win.tar.gz",
-      "checksum": "A5793E18DFE38F8167B59EFB8C542AFD48A9D8748407E475E6F5676EEF94F0D2DB2AE3D8B841D7EDEB398E1EAEB8FE58907696DB7B1F7C4532AA43F6520B76C1",
-      "algorithm": "sha512"
-    },
-    {
       "id": "github_release/github.com/int128/ghcp/v1.13.2/ghcp_darwin_amd64.zip",
       "checksum": "8221F411AC4F2465B7CFD31EFB6DA4568E5FD20BAD9F66AC312B23AFA4520FDD",
       "algorithm": "sha256"
