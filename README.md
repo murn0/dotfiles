@@ -29,7 +29,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.0`
 - GithubCLI (https://github.com/cli/cli) `v2.34.0`
 - lazygit (https://github.com/jesseduffield/lazygit) `v0.40.2`
-- neovim (https://github.com/neovim/neovim) `v0.9.1`
+- neovim (https://github.com/neovim/neovim) `v0.9.2`
 - zoxide (https://github.com/ajeetdsouza/zoxide) `v0.9.2`
 
 ## Makefile task
