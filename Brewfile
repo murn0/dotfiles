@@ -23,7 +23,7 @@ brew "tmux"
 brew "translate-shell"
 # Password manager that keeps all passwords secure behind one password
 cask "1password", args: { appdir: "/Applications" }
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # Collection of apps and services for photography, design, video, web, and UX
 cask "adobe-creative-cloud", args: { appdir: "/Applications" }
@@ -55,8 +55,6 @@ cask "istat-menus"
 cask "iterm2"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
-# Interface for reading and syncing eBooks
-cask "kindle"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger", args: { appdir: "/Applications" }
 # Icon manager and library
@@ -94,6 +92,7 @@ vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "GitHub.codespaces"
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "GitHub.remotehub"
 vscode "github.vscode-github-actions"
 vscode "golang.go"
