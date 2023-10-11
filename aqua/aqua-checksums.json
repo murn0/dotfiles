@@ -336,23 +336,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "0DFA108A15A0384187580609B9C9DD5D3C28602F14ABD896F4556450B2EA139CCC5D9DD1150C6ED4527CE2EFB49510FD68512E9C4D01DF75509C76AF03567BEE",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "B2D74243AD677EE036F45D0483E0D5DFC1BE6E297CAA5BCB4551E289EEBA81295B32F740D5C2FA4E29DA6F6595406852B3B77008BCAF4E5E7F2CB36996635E1C",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "EDCAC5D952C80EBF32F74E7B69650A2A12C8D7EA06050EF026394965C51F4503AFE1B97386967A439CE4E9472A443AD1F9154B939B0D559BE6AAD73EAE191A01",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "34C323ADE2B118F8127E9349B8FFB4928A729F9E39438A5F78556453BE2059D4C13FB01F5AB17A9369799BB1D75447A2CC9C6B1D34E472BE69248EABA79F13D7",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-x86_64-pc-windows-msvc.zip",
-      "checksum": "BF24A4C2F4E8ADF71955D93FB627E41E6148A3B56D817AA3CB3FBD2F72C6FCAF8C9D2401B02308F3919F402EFF2387208D6B6EA4C386080349FE6134457CAA53",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "219B319F0BE16B7E048DAA4CC36C57A1FC6743EA688E0953B3B87CDC5CB15C80B20EB652B17245DDE146ACA1EA8AA067163CF99BB6BFF2E972D903DE090D3500",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "75CFB1703977F1E5D6E0C82CDD44C2C053B67DC9038EC6AE3050610863AAF6C9998E125A4BAAF3475202D25EA5044B3053DD6CBB6FA75662FD87A98BB9DAB46A",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "5059F56CDAD307004CC84A941487DBFCC8F5D3F905E14F07DBE04849F64D998FBD47C547660EDF1E2BB841EAC7D7296BA3B441191637B60CB8D2792CFD83F33F",
       "algorithm": "sha512"
     },
     {
