@@ -2,6 +2,7 @@
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_CACHE_HOME "$HOME/.cache"
 set -gx XDG_DATA_HOME "$HOME/.local/share"
+set -gx FISH_INSTALL_PATH (type -p fish)
 
 # Add aqua to the environment variable PATH.
 if [ -n "$AQUA_ROOT_DIR" ]

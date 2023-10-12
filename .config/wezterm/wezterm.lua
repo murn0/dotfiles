@@ -1,27 +1,17 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
-local mux = wezterm.mux
 local config = {}
 
 if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
-wezterm.on('update-right-status', function(window, pane)
+wezterm.on('update-right-status', function(window)
     window:set_right_status(window:active_workspace())
 end)
 
--- 起動時の設定
-wezterm.on('gui-startup', function(cmd)
-    local tab, pane, window = mux.spawn_window(cmd or {})
-
-    -- ペインの分割設定
-    pane:split { direction = 'Left', size = 0.95 }
-    pane:split { direction = 'Bottom', size = 0.5 }
-end)
-
 -- タブのタイトル設定
-wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+wezterm.on('format-tab-title', function(tab)
     -- Ctrl+Shift+Zでズームしたペインのタイトルに🔎を付ける
     local zoomed = tab.active_pane.is_zoomed and '🔎 ' or ' '
 
@@ -30,24 +20,52 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
     }
 end)
 
+-- 背景の透過
+wezterm.on('toggle-opacity', function(window)
+  local overrides = window:get_config_overrides() or {}
+  if not overrides.window_background_opacity then
+    overrides.window_background_opacity = 0.9
+  else
+    overrides.window_background_opacity = nil
+  end
+  window:set_config_overrides(overrides)
+end)
+
 -- 起動時にfishシェルをログインシェルの様に起動する(fish -l)
 config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 -- カラースキーム
 config.color_scheme = 'Dark+'
 -- IMEの使用
 config.use_ime = true
--- タブバーを下に表示
-config.tab_bar_at_bottom = true
+-- タブが1つしかない場合は非表示
+config.hide_tab_bar_if_only_one_tab = true
+-- タイトルバーを非表示
+config.window_decorations = "RESIZE"
+config.front_end = "WebGpu"
 -- 非アクティブなペインの色
 config.inactive_pane_hsb = {
     saturation = 0.9,
     brightness = 0.1,
 }
+config.window_padding = {
+  left = 5,
+  right = 5,
+  top = 5,
+  bottom = 0,
+}
 -- フォント
-config.font = wezterm.font('HackGen35 Console NF', { weight = 'Regular' })
-config.font_size = 13.3
--- 背景透過
-config.window_background_opacity = 0.9
+config.font = wezterm.font_with_fallback {
+  {
+    family = "HackGen35 Console NF",
+    weight = "Regular"
+  },
+  {
+    family = "HackGen35 Console NF",
+    weight = "Bold"
+  },
+}
+config.font_size = 14
+config.bold_brightens_ansi_colors = true
 -- ベル
 config.audible_bell = 'Disabled'
 config.visual_bell = {
@@ -88,6 +106,48 @@ config.keys = {
         mods = 'CTRL|SHIFT',
         action = act.TogglePaneZoomState,
     },
+    -- ペインのサイズ変更
+    {
+        key = 'LeftArrow',
+        mods = 'CMD',
+        action = act.AdjustPaneSize { 'Left', 2 }
+    },
+    {
+        key = 'DownArrow',
+        mods = 'CMD',
+        action = act.AdjustPaneSize { 'Down', 2 }
+    },
+    {
+        key = 'UpArrow',
+        mods = 'CMD',
+        action = act.AdjustPaneSize { 'Up', 2 }
+    },
+    {
+        key = 'RightArrow',
+        mods = 'CMD',
+        action = act.AdjustPaneSize { 'Right', 2 }
+    },
+    -- ペインの移動
+    {
+      key = 'LeftArrow',
+      mods = 'CMD|SHIFT',
+      action = act.RotatePanes 'CounterClockwise',
+    },
+    {
+      key = 'RightArrow',
+      mods = 'CMD|SHIFT',
+      action = act.RotatePanes 'Clockwise',
+    },
+    {
+      key = 'k',
+      mods = 'CTRL|SHIFT',
+      action = act.ScrollByLine(-1)
+    },
+    {
+      key = 'j',
+      mods = 'CTRL|SHIFT',
+      action = act.ScrollByLine(1)
+    },
     -- ワークスペースの一覧を表示
     {
         key = '9',
@@ -117,6 +177,12 @@ config.keys = {
             end),
         },
     },
+    -- 背景色の透明化のトグル
+    {
+      key = 'B',
+      mods = 'CTRL|SHIFT',
+      action = wezterm.action.EmitEvent 'toggle-opacity',
+    },
 }
 
 --- 3クリックでコマンド全体を選択する
@@ -127,5 +193,6 @@ config.mouse_bindings = {
         mods = 'NONE',
     },
 }
+
 
 return config
