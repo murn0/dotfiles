@@ -19,7 +19,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - starship (https://github.com/starship/starship) `v1.16.0`
 
 ## Install packages
-- bat (https://github.com/sharkdp/bat) `v0.23.0`
+- bat (https://github.com/sharkdp/bat) `v0.24.0`
 - delta (https://github.com/dandavison/delta) `v0.16.5`
 - dog (https://github.com/ogham/dog) `0.1.0`
 - erdtree (https://github.com/solidiquis/erdtree) `v3.1.2`
@@ -29,7 +29,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.0`
 - GithubCLI (https://github.com/cli/cli) `v2.36.0`
 - lazygit (https://github.com/jesseduffield/lazygit) `v0.40.2`
-- neovim (https://github.com/neovim/neovim) `v0.9.2`
+- neovim (https://github.com/neovim/neovim) `v0.9.4`
 - zoxide (https://github.com/ajeetdsouza/zoxide) `v0.9.2`
 
 ## Makefile task

@@ -226,18 +226,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.2/nvim-linux64.tar.gz",
-      "checksum": "FEE870B6173F1DA134281824A744ADA91EF612723BD328683DC941EF16837EC5",
+      "id": "github_release/github.com/neovim/neovim/v0.9.4/nvim-linux64.tar.gz",
+      "checksum": "DBF4EAE83647CA5C3CE1CD86939542A7B6AE49CD78884F3B4236F4F248E5D447",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.2/nvim-macos.tar.gz",
-      "checksum": "DA2E852E25325DDC568C9C828060221A03B79B4E9FC9B7EECFF9A633830EB923",
+      "id": "github_release/github.com/neovim/neovim/v0.9.4/nvim-macos.tar.gz",
+      "checksum": "86136ACBC959ABD164B7C1177707D3A8784A81B158380CF3493B1B5F1D9ED88A",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.2/nvim-win64.zip",
-      "checksum": "73F0B11322A905FBD9C1BA28FCA21BACBF9B8547F164D3D5439F39D1C272BF15",
+      "id": "github_release/github.com/neovim/neovim/v0.9.4/nvim-win64.zip",
+      "checksum": "C2CCCFA8D6A116AD3E30334826E05D86CCFA055CF67210B32BC84A8E9D7390BB",
       "algorithm": "sha256"
     },
     {
@@ -326,23 +326,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "0DFA108A15A0384187580609B9C9DD5D3C28602F14ABD896F4556450B2EA139CCC5D9DD1150C6ED4527CE2EFB49510FD68512E9C4D01DF75509C76AF03567BEE",
+      "id": "github_release/github.com/sayanarijit/xplr/v0.21.3/xplr-linux.tar.gz",
+      "checksum": "BFE4A40B3C590BA0C816462D8C3B6C01D7591708ACF5FB1BB28E256A16C84EAB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sayanarijit/xplr/v0.21.3/xplr-macos.tar.gz",
+      "checksum": "B9B6779895C6455A3460017B1217FD280033D7EA9068F7F74712C393A181CB24",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "B2D74243AD677EE036F45D0483E0D5DFC1BE6E297CAA5BCB4551E289EEBA81295B32F740D5C2FA4E29DA6F6595406852B3B77008BCAF4E5E7F2CB36996635E1C",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "EDCAC5D952C80EBF32F74E7B69650A2A12C8D7EA06050EF026394965C51F4503AFE1B97386967A439CE4E9472A443AD1F9154B939B0D559BE6AAD73EAE191A01",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "34C323ADE2B118F8127E9349B8FFB4928A729F9E39438A5F78556453BE2059D4C13FB01F5AB17A9369799BB1D75447A2CC9C6B1D34E472BE69248EABA79F13D7",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-x86_64-pc-windows-msvc.zip",
-      "checksum": "BF24A4C2F4E8ADF71955D93FB627E41E6148A3B56D817AA3CB3FBD2F72C6FCAF8C9D2401B02308F3919F402EFF2387208D6B6EA4C386080349FE6134457CAA53",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "219B319F0BE16B7E048DAA4CC36C57A1FC6743EA688E0953B3B87CDC5CB15C80B20EB652B17245DDE146ACA1EA8AA067163CF99BB6BFF2E972D903DE090D3500",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.23.0/bat-v0.23.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "75CFB1703977F1E5D6E0C82CDD44C2C053B67DC9038EC6AE3050610863AAF6C9998E125A4BAAF3475202D25EA5044B3053DD6CBB6FA75662FD87A98BB9DAB46A",
+      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "5059F56CDAD307004CC84A941487DBFCC8F5D3F905E14F07DBE04849F64D998FBD47C547660EDF1E2BB841EAC7D7296BA3B441191637B60CB8D2792CFD83F33F",
       "algorithm": "sha512"
     },
     {
@@ -451,8 +461,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.60.0/registry.yaml",
-      "checksum": "8804D804442A5844EE3B6BAA0E702668009E67204A73C3DD998E758DF910C208AB781FC45DE5D92D2F755B2818A17F16B8CE8DEF0519FEA438552B8818908168",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.63.0/registry.yaml",
+      "checksum": "BDA8D99C135C7AA5115BB965419DD4278D501AF441228B01D789D6E8F0E3F80DB0C6DF133110BF7BB3482F6E9DBB11F4E80E3FE93B024CAAAF6891B1604B48CF",
       "algorithm": "sha512"
     }
   ]
