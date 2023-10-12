@@ -4,7 +4,7 @@ gui:
   commandLogSize: 18
 
 os:
-  editPreset: 'vscode'
+  editPreset: 'nvim'
 
 promptToReturnFromSubprocess: false # サブプロセスの終了時に確認画面を表示しない
 
