@@ -356,23 +356,23 @@
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.0/fd-v8.7.0-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "A59B2A43BE739DDEC40929350FB3BBE084D7782856EDBA1E259ABB9E02586DC7DDA762347E276B9E77ABC14E2DB1780DDB8D8111F4F28DDC19BEEB40FE9C825A",
+      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "DC7A616C122A753E61036BB4621FA71D3D710368EAE4884CE0A570AC2299CBECCB9D57364764C63B2DF93143A0186C5E666F93C3CEEEACFDC0EFCC039B448C5F",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.0/fd-v8.7.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "DC204DCE21E9307AA023F05ED00BB24244F3260C700E34E5069E4E51A1BA37CD34F677EA586C41877DF0A55BA6D6D0154BAEC56698AE774C5D15AEEC5B886991",
+      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-x86_64-apple-darwin.tar.gz",
+      "checksum": "1BC42476F45F9643FE065B57F7A7B6667546D70D73D7EDC3102FCFE7EC4D1E5864E7444946FAC040500324334B5F8D46F18D81CE603F889019C0821968FEC5AC",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.0/fd-v8.7.0-x86_64-pc-windows-msvc.zip",
-      "checksum": "79AE745B1AB8EAD9A43E658C51A32B188373CCA47D93DE85A2B0D3DE1C83F7BE1BA020DE0854450D85C862EB1D500F474C34FE70498D55C627995F48DA91825D",
+      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-x86_64-pc-windows-msvc.zip",
+      "checksum": "9B3FBF6847C3892BC54137642EB3BB77A335F355B87DE706C911B7ED0840C5CFD44E7C557B78616E17CF334CEB4BFA86D57015F623F62EED194A1DBA472DD1A9",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.0/fd-v8.7.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "7B0E3D78BE6BB0A33448C9DF33B1064C80F53E02BD47956B9A5C298B2D1A51CEB88B90795A46E1EB6717E3C125B4DDBB33C49A4F2368018A29C0A266025EFCF9",
+      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "62E35B8CD81825A69A74C7CBB05CD487472B1CE75A21F5D0633503C3F20A61A3B9C1A8711C1DD1D8F51B2053BC96899F2616E305EB4380CD760487914995EA57",
       "algorithm": "sha512"
     },
     {
