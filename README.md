@@ -8,7 +8,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 
 ## Fish shell plugin management
 - fisher (https://github.com/jorgebucaran/fisher) `v4.4.4`
-    - fzf.fish (https://github.com/PatrickF1/fzf.fish) `v10.0`
+    - fzf.fish (https://github.com/PatrickF1/fzf.fish) `v10.1`
         - ⚠️ Attention to the version of dependent packages: `fish`,`fzf`,`fd`,`bat` (https://github.com/PatrickF1/fzf.fish#installation)
 
 ## Font
@@ -27,7 +27,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - fd (https://github.com/sharkdp/fd) `v8.7.1`
 - fzf (https://github.com/junegunn/fzf) `0.43.0`
 - gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.0`
-- GithubCLI (https://github.com/cli/cli) `v2.37.0`
+- GithubCLI (https://github.com/cli/cli) `v2.38.0`
 - lazygit (https://github.com/jesseduffield/lazygit) `v0.40.2`
 - neovim (https://github.com/neovim/neovim) `v0.9.4`
 - zoxide (https://github.com/ajeetdsouza/zoxide) `v0.9.2`
