@@ -25,7 +25,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - erdtree (https://github.com/solidiquis/erdtree) `v3.1.2`
 - exa (https://github.com/ogham/exa) `v0.10.1`
 - fd (https://github.com/sharkdp/fd) `v8.7.1`
-- fzf (https://github.com/junegunn/fzf) `0.43.0`
+- fzf (https://github.com/junegunn/fzf) `0.44.0`
 - gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.0`
 - GithubCLI (https://github.com/cli/cli) `v2.38.0`
 - lazygit (https://github.com/jesseduffield/lazygit) `v0.40.2`
