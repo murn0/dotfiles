@@ -4,7 +4,7 @@
 curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 ```
 ## Shell
-- fish shell (https://github.com/fish-shell/fish-shell) `v3.6.1`
+- fish shell (https://github.com/fish-shell/fish-shell) `3.6.3`
 
 ## Fish shell plugin management
 - fisher (https://github.com/jorgebucaran/fisher) `v4.4.4`
