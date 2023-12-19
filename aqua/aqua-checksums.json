@@ -356,24 +356,24 @@
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "DC7A616C122A753E61036BB4621FA71D3D710368EAE4884CE0A570AC2299CBECCB9D57364764C63B2DF93143A0186C5E666F93C3CEEEACFDC0EFCC039B448C5F",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/fd/v9.0.0/fd-v9.0.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "94844B8BDB8E7D48D4AA48574A6BA8BC404A88B1043E5B857602B91F6DFB188A",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-x86_64-apple-darwin.tar.gz",
-      "checksum": "1BC42476F45F9643FE065B57F7A7B6667546D70D73D7EDC3102FCFE7EC4D1E5864E7444946FAC040500324334B5F8D46F18D81CE603F889019C0821968FEC5AC",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/fd/v9.0.0/fd-v9.0.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "33ABEE4841AC6C68A818291C93FDB2599EF87069BE288880BDFE46F58E5549A4",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-x86_64-pc-windows-msvc.zip",
-      "checksum": "9B3FBF6847C3892BC54137642EB3BB77A335F355B87DE706C911B7ED0840C5CFD44E7C557B78616E17CF334CEB4BFA86D57015F623F62EED194A1DBA472DD1A9",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/fd/v9.0.0/fd-v9.0.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "8C5FF3FB24EF02F78D3E8E7DDF116456ACEEEB3832F20BBA56F21D8B373E5E1B",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "62E35B8CD81825A69A74C7CBB05CD487472B1CE75A21F5D0633503C3F20A61A3B9C1A8711C1DD1D8F51B2053BC96899F2616E305EB4380CD760487914995EA57",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/fd/v9.0.0/fd-v9.0.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "069E2D58127DDD944C03A2684AD79F72E3F9BD3E0D2642C36ADC5B367C134592",
+      "algorithm": "sha256"
     },
     {
       "id": "github_release/github.com/solidiquis/erdtree/v3.1.2/erd-v3.1.2-aarch64-apple-darwin.tar.gz",
