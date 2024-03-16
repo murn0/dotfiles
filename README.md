@@ -20,7 +20,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 
 ## Install packages
 - bat (https://github.com/sharkdp/bat) `v0.24.0`
-- delta (https://github.com/dandavison/delta) `v0.16.5`
+- delta (https://github.com/dandavison/delta) `0.17.0`
 - dog (https://github.com/ogham/dog) `0.1.0`
 - erdtree (https://github.com/solidiquis/erdtree) `v3.1.2`
 - exa (https://github.com/ogham/exa) `v0.10.1`
