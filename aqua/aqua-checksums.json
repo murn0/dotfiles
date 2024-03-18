@@ -326,13 +326,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sayanarijit/xplr/v0.21.5/xplr-linux.tar.gz",
-      "checksum": "249C448944B7F45535A14A56FC466104F8D8DD14250C9E3C45367496415A820F",
+      "id": "github_release/github.com/sayanarijit/xplr/v0.21.7/xplr-linux.tar.gz",
+      "checksum": "753A926FA9B32F33B5A6081C4326BDD0F018FE449D4F2D8BB62E2C84C377CF72",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sayanarijit/xplr/v0.21.5/xplr-macos.tar.gz",
-      "checksum": "0E1004DAA48BFC363F6450C3BF79BDF8E0463EA58C04BC4962483FEC6B6AA0B8",
+      "id": "github_release/github.com/sayanarijit/xplr/v0.21.7/xplr-macos.tar.gz",
+      "checksum": "34A91E981791E9CA614E51179E45F7ECA1191F1895DBB18D5D49F382BCF412BF",
       "algorithm": "sha256"
     },
     {
