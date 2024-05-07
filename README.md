@@ -16,7 +16,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
     - HackGen (https://github.com/yuru7/HackGen) `v2.9.0`
 
 ## Prompt
-- starship (https://github.com/starship/starship) `v1.17.1`
+- starship (https://github.com/starship/starship) `v1.18.2`
 
 ## Install packages
 - bat (https://github.com/sharkdp/bat) `v0.24.0`
