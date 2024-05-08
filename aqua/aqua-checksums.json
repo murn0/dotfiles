@@ -1,6 +1,16 @@
 {
   "checksums": [
     {
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-aarch64-apple-darwin.tar.gz",
+      "checksum": "5863E8AC778C5B71728161C72FA226DBE15EFE06774A47914BD443E29D880C78",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "2D730299B6E5A984563CD56CD91EEDAAC6956727FA8F5440ECD24EF132E6CDC9",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-apple-darwin.tar.gz",
       "checksum": "D60E1DF731119E742C4CA4F30655B697250D3B41153A6E80B925D7B9F992A9AA",
       "algorithm": "sha256"
@@ -461,8 +471,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.127.0/registry.yaml",
-      "checksum": "A12E7F6497EA1D47E557A63659679E9BB04584C4CF9203B571A46B36D84C633816FDB4A5AE5B397992226AEE08D1AB91E17567B475B6956B566AE1BA32E0D8F9",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.174.0/registry.yaml",
+      "checksum": "87915F6D4E44FFE6C0B6ED9F71625CEEAB45B85C6C3596579A768CABEAB70E55741121C5C225E3AD7174F328195D90952CA67572DF012CED300BFC7C9EAFBC5A",
       "algorithm": "sha512"
     }
   ]
