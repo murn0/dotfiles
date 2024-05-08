@@ -27,7 +27,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - fd (https://github.com/sharkdp/fd) `v8.7.1`
 - fzf (https://github.com/junegunn/fzf) `0.51.0`
 - gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.1`
-- GithubCLI (https://github.com/cli/cli) `v2.49.0`
+- GithubCLI (https://github.com/cli/cli) `v2.49.1`
 - lazygit (https://github.com/jesseduffield/lazygit) `v0.41.0`
 - neovim (https://github.com/neovim/neovim) `v0.9.5`
 - zoxide (https://github.com/ajeetdsouza/zoxide) `v0.9.4`
