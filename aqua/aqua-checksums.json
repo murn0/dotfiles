@@ -1,19 +1,19 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/13.0.0/ripgrep-13.0.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "B3432616745BCC36771A646A515990527B8ABD00BDD42BD790A1C94359F77291BE30E42068C17BABF3365FF919F0F76393843991879C0B26EE7FE3A4374FD8DB",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "D60E1DF731119E742C4CA4F30655B697250D3B41153A6E80B925D7B9F992A9AA",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/13.0.0/ripgrep-13.0.0-x86_64-pc-windows-msvc.zip",
-      "checksum": "E4E59ABD6A7985166C028086299F9904A3AA8A639F6FA0474A495641D9AEFCA9DB9BFA44AB38776E8EFF1F8659D8230EBF0CAA77AD0FEED6605F748B5C2FDA85",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "74831F4E66F01FE452E7D6D28805384D1A66FA8CC22C2963DBC4612FB4620856",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "CDC18BD31019FC7B8509224C2F52B230BE33DEE36DEEA2E4DB1EE8C78ACE406C7CD182814D056F4CE65EE533290A674822432777B61C2B4BC8CC4A4EA107CFDE",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "A18E0B611F9D9976B11AB8C3355A92C68C8BD1965B0D99366777751343E33938",
+      "algorithm": "sha256"
     },
     {
       "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.4/zoxide-0.9.4-aarch64-apple-darwin.tar.gz",
