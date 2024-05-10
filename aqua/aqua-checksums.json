@@ -1,18 +1,18 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "D60E1DF731119E742C4CA4F30655B697250D3B41153A6E80B925D7B9F992A9AA",
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "4D882FC945E5A9B6080A5C0506F7FE4AAEA191C1865355428DD4BFA096F974B5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-pc-windows-msvc.zip",
-      "checksum": "74831F4E66F01FE452E7D6D28805384D1A66FA8CC22C2963DBC4612FB4620856",
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "FE4F75EDFAA50F0D4FECBF47696B7629F3449C9C2C5A4DA828753139E5A2E203",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.0/ripgrep-14.0.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "A18E0B611F9D9976B11AB8C3355A92C68C8BD1965B0D99366777751343E33938",
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "F84757B07F425FE5CF11D87DF6644691C644A5CD2348A2C670894272999D3BA7",
       "algorithm": "sha256"
     },
     {
@@ -296,33 +296,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_darwin_amd64.tar.gz",
-      "checksum": "1459F1EC2182162C85BEDDACFF9B05D1CB921BFB2656A6FD9151E9CD84CD63E9",
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.0/actionlint_1.7.0_darwin_amd64.tar.gz",
+      "checksum": "138AFF674F31BD218030D4B00B3024BF0C721B75A7EC8E90B743763F81E3128E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_darwin_arm64.tar.gz",
-      "checksum": "4B8EFF986643B8D9918C4FD3ADA9C0EEE7E59230A53A46A9BD9686521DCAD170",
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.0/actionlint_1.7.0_darwin_arm64.tar.gz",
+      "checksum": "806E73FBAFE54B7324D9478798534C5195FB71EA171633D9035B3FCA237ADDD3",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_linux_amd64.tar.gz",
-      "checksum": "5C9B6E5418F688B7F7C7E3D40C13D9E41B1CA45FB6A2C35788B0580E34B7300F",
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.0/actionlint_1.7.0_linux_amd64.tar.gz",
+      "checksum": "8AAE9148F61952D11A97651852FDC7DFFD2B762ED3CDD28B3C2232AE5F55D4DB",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_linux_arm64.tar.gz",
-      "checksum": "03FFE5891DA7800EC39533543667697B5C292D0FF8B906397B43C58374EC052A",
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.0/actionlint_1.7.0_linux_arm64.tar.gz",
+      "checksum": "8181452246E7E6310B988F83762FC982E03F27EEB53DD4AD33FA4A5F4276B383",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_windows_amd64.zip",
-      "checksum": "2040AEB2530A80ABBB923493F6947443203B7E60E829CB7BAD1C8CDE1483C376",
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.0/actionlint_1.7.0_windows_amd64.zip",
+      "checksum": "2ECB1B4D3B54EE4503A0EDEB29BDC910C5EF8826358698078905F485E0BAB675",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_windows_arm64.zip",
-      "checksum": "BC082F32A036A86DAD364BC46E2D707C4DA5615598E2D50DA2CB840CFF97731D",
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.0/actionlint_1.7.0_windows_arm64.zip",
+      "checksum": "C2D9D30C7FDB4808A99A0800B768425B14132D4968AB01926F1BAFA44B0F230A",
       "algorithm": "sha256"
     },
     {
