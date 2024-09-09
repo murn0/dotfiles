@@ -126,36 +126,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.1/darwin-amd64",
-      "checksum": "E2CF65893340B2B3E4D93BFC7DA6A133F239A1CC37146A461E112FACACC5035A",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.1/darwin-arm64",
-      "checksum": "8557987275A5FD9A491F1126EFC0CF123328B0E43B83B4D3DFB1298538DAA265",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.1/linux-amd64",
-      "checksum": "2CA205681C12E5263B843732671E50AE506FD5DD9BAD8B0725314C975A4DDD35",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.1/linux-arm64",
-      "checksum": "12188E298150729518697F917614A2321664C4EF99329C3FCA418AE37D01C1F3",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.1/windows-amd64.exe",
-      "checksum": "74873AE9BEED1A50826DC6092347F61A1EB4F43F2884B3E0092FADD81F100584",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dlvhdr/gh-dash/v3.11.1/windows-arm64.exe",
-      "checksum": "9007C905900FC7F260C5DA39D3143540115EFE710BBE8595CCA42D04AD7A9C89",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/int128/ghcp/v1.13.2/ghcp_darwin_amd64.zip",
       "checksum": "8221F411AC4F2465B7CFD31EFB6DA4568E5FD20BAD9F66AC312B23AFA4520FDD",
       "algorithm": "sha256"
