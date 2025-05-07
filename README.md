@@ -24,7 +24,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - dog (https://github.com/ogham/dog) `0.1.0`
 - erdtree (https://github.com/solidiquis/erdtree) `v3.1.2`
 - exa (https://github.com/ogham/exa) `v0.10.1`
-- fd (https://github.com/sharkdp/fd) `v8.7.1`
+- fd (https://github.com/sharkdp/fd) `v10.1.0`
 - fzf (https://github.com/junegunn/fzf) `0.51.0`
 - gh-dash (https://github.com/dlvhdr/gh-dash) `v3.11.1`
 - GithubCLI (https://github.com/cli/cli) `v2.49.2`
