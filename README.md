@@ -13,7 +13,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 
 ## Font
 - Nerd Fonts (https://www.nerdfonts.com/)
-    - HackGen (https://github.com/yuru7/HackGen) `v2.9.0`
+    - HackGen (https://github.com/yuru7/HackGen) `v2.10.0`
 
 ## Prompt
 - starship (https://github.com/starship/starship) `v1.23.0`
