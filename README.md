@@ -19,7 +19,7 @@ curl -sL https://raw.githubusercontent.com/murn0/dotfiles/master/install.sh | sh
 - starship (https://github.com/starship/starship) `v1.19.0`
 
 ## Install packages
-- bat (https://github.com/sharkdp/bat) `v0.24.0`
+- bat (https://github.com/sharkdp/bat) `v0.25.0`
 - delta (https://github.com/dandavison/delta) `0.18.2`
 - dog (https://github.com/ogham/dog) `0.1.0`
 - erdtree (https://github.com/solidiquis/erdtree) `v3.1.2`
