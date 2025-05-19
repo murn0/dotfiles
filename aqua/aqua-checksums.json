@@ -336,24 +336,24 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "B2D74243AD677EE036F45D0483E0D5DFC1BE6E297CAA5BCB4551E289EEBA81295B32F740D5C2FA4E29DA6F6595406852B3B77008BCAF4E5E7F2CB36996635E1C",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/bat/v0.25.0/bat-v0.25.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "D155DF218DC2D662DA191E2DACDDC71C90197B62EBE7E2923A659E5DD055D5CB",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "34C323ADE2B118F8127E9349B8FFB4928A729F9E39438A5F78556453BE2059D4C13FB01F5AB17A9369799BB1D75447A2CC9C6B1D34E472BE69248EABA79F13D7",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/bat/v0.25.0/bat-v0.25.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "B974AA834B6B65610090AED2BC7310D11C6F500105696D23A130AEE24FD8380F",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-pc-windows-msvc.zip",
-      "checksum": "219B319F0BE16B7E048DAA4CC36C57A1FC6743EA688E0953B3B87CDC5CB15C80B20EB652B17245DDE146ACA1EA8AA067163CF99BB6BFF2E972D903DE090D3500",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/bat/v0.25.0/bat-v0.25.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "1D5CED071BA9C765E16F4065877C178CEFCFD2FE9581E9DDC92AF265B73991BD",
+      "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sharkdp/bat/v0.24.0/bat-v0.24.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "5059F56CDAD307004CC84A941487DBFCC8F5D3F905E14F07DBE04849F64D998FBD47C547660EDF1E2BB841EAC7D7296BA3B441191637B60CB8D2792CFD83F33F",
-      "algorithm": "sha512"
+      "id": "github_release/github.com/sharkdp/bat/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "93F47D76ABE328C402EF712E9AC92AA6D5BC84D5ADCBCAF0BBC5665E5275A941",
+      "algorithm": "sha256"
     },
     {
       "id": "github_release/github.com/sharkdp/fd/v8.7.1/fd-v8.7.1-aarch64-unknown-linux-gnu.tar.gz",
