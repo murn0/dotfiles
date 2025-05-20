@@ -46,28 +46,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/caarlos0/svu/v1.12.0/svu_1.12.0_darwin_all.tar.gz",
-      "checksum": "19ABE5CC933BFCEAEABAF6A6F25EE43BC26E9D32C643CC0BBD90AC351FE136FE",
+      "id": "github_release/github.com/caarlos0/svu/v3.2.3/svu_3.2.3_darwin_all.tar.gz",
+      "checksum": "3E62D42A0EAE1A6D7DA28CCCCFF1757958CBB72FD42B0D52A772475B845C9446",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/caarlos0/svu/v1.12.0/svu_1.12.0_linux_amd64.tar.gz",
-      "checksum": "468469E8A319371A561AF2E1F03B979A2269943E6D76A03C3518D4BEA898294E",
+      "id": "github_release/github.com/caarlos0/svu/v3.2.3/svu_3.2.3_linux_amd64.tar.gz",
+      "checksum": "2509DB2B9A5D97A212EFB8E242E5782A1A62459AC516B3663C525DB6B8474C02",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/caarlos0/svu/v1.12.0/svu_1.12.0_linux_arm64.tar.gz",
-      "checksum": "2C659CFAF85672D2C6673362BD18D6461E49C409CD6E3E31FBE807DE0E8036BE",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/caarlos0/svu/v1.12.0/svu_1.12.0_windows_amd64.tar.gz",
-      "checksum": "696718AE3EF9146AB6794A2027600B58D7E15B41C003ADF91EC534792D5D8DF3",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/caarlos0/svu/v1.12.0/svu_1.12.0_windows_arm64.tar.gz",
-      "checksum": "687D5BC02CDECA7F3B0BCEBAF913E0A6A967C99A344720508776F0965D9B8901",
+      "id": "github_release/github.com/caarlos0/svu/v3.2.3/svu_3.2.3_linux_arm64.tar.gz",
+      "checksum": "25489D476893908C79C168B241D0C1CECBB8E749556BB4B54ADF3222488AA72B",
       "algorithm": "sha256"
     },
     {
