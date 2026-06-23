@@ -111,14 +111,14 @@ jobs:
         with:
           ref: ${{steps.ref.outputs.ref}}
 
-      - uses: aquaproj/aqua-installer@fd2089d1f56724d6456f24d58605e6964deae124 # v2.3.2
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         if: steps.generate_token.outputs.token_type == 'empty'
         # Install ghcp
         with:
           aqua_version: ${{inputs.aqua_version}}
         env:
           AQUA_GITHUB_TOKEN: ${{github.token}}
-      - uses: aquaproj/aqua-installer@fd2089d1f56724d6456f24d58605e6964deae124 # v2.3.2
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         if: ${{steps.generate_token.outputs.token_type != 'empty'}}
         # Install ghcp
         with:
